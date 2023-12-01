@@ -1,0 +1,1484 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-metrics</title>
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <a href="">
+                        <img src="{% static 'assets/imgs/Header-Logo.svg' %}" alt="Логотип" class="header__logo">
+                    </a>
+                    <nav class="header__menu">
+                        <ul class="menu-list">
+                            <a class="login-link burger" href="/authorisation">Войти</a>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">О продукте</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">Тарифы</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">Отзывы</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="blog" class="menu-link">Блог</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">FAQ</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="contacts" class="menu-link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header__buttons">
+                        <div class="button-login">
+                            <a class="login-link" href="/authorisation">Войти</a>
+                        </div>
+                        <a href="registration" class="button-reg">
+                            <p>Регистрация</p>
+                        </a>
+                        <div class="header__burger">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <section class="intro">
+                <div class="container">
+                    <div class="intro_inner">
+                        <div class="intro__titles">
+                            <h1 class="intro__title">Комплексный инструмент аналитики и управления продажами на
+                                маркетплейсах</h1>
+                            <h2 class="intro__subtitle">Разнообразный и богатый опыт постоянное
+                                информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные
+                                задания по разработке систем участия.</h2>
+                            <form class="intro__form">
+                                <input class="form__input" type="text" placeholder="Введите ваш E-mail">
+                                <a href="#" class="form__btn">
+                                    <p>Попробовать</p>
+                                </a>
+                            </form>
+                            <p class="intro__privacy">
+                                Нажимая на кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a>
+                            </p>
+                        </div>
+                        <div class="intro__image">
+                            <img src="{% static 'assets/imgs/intro-image-1.png' %}" alt="Фото">
+                            <img src="{% static 'assets/imgs/intro-image-2.png' %}" alt="Фото">
+                        </div>
+                    </div>
+                </div>
+                <img class="intro__rectangle" src="{% static 'assets/imgs/intro-rectangle.png' %}" alt="Засвет">
+                <img class="intro__pattern" src="{% static 'assets/imgs/intro-pattern.png' %}" alt="Патерн">
+                <img class="intro__rectangle bottom" src="{% static 'assets/imgs/intro-pattern-bottom.png' %}" alt="Засвет снизу">
+            </section>
+
+            <section class="product">
+                <div class="container">
+                    <div class="section__header">
+                        <p class="section__overtitle">О продукте</p>
+                        <h1 class="section__title">Попробуйте наш продукт на практике без регистрации</h1>
+                    </div>
+                    <div class="choice__product">
+                        <div class="choice__btn toggle-button" data-name="product">Товар</div>
+                        <div class="choice__btn toggle-button" data-name="category">Категории</div>
+                        <div class="choice__btn toggle-button" data-name="sellers">Продавцы</div>
+                        <div class="choice__btn toggle-button" data-name="brands">Бренды</div>
+                        <div class="choice__btn toggle-button" data-name="task">Таск</div>
+                    </div>
+                    <div class="product__main-page toggle-block active" data-name="product">
+                        <div class="product__page-title ">
+                            <p>Кардиган женский, ограниченная коллекция</p>
+                        </div>
+                        <div class="product__main">
+                            <div class="product__information ">
+                                <div class="product__preview">
+                                    <div class="product__photo">
+                                        <div class="product__gallery" id="lightgallery">
+                                            <a href="{% static 'assets/imgs/product-preview-01.png' %}">
+                                                <img alt="img1" src="{% static 'assets/imgs/product-preview-01.png' %}" />
+
+                                            <a href="{% static 'assets/imgs/product-preview-02.png' %}">
+                                                <img alt="img1" src="{% static 'assets/imgs/product-preview-02.png' %}" />
+                                            </a>
+                                            <a href="{% static 'assets/imgs/product-preview-03.png' %}">
+                                                <img alt="img1" src="{% static 'assets/imgs/product-preview-03.png' %}" />
+                                            </a>
+                                            <a href="{% static 'assets/imgs/product-preview.png' %}">
+                                                <img alt="img1" src="{% static 'assets/imgs/product-preview.png' %}" />
+                                            </a>
+                                        </div>
+                                        <div class="gallery-arrow">
+                                            <img src="{% static 'assets/imgs/gallery-arrow.svg' %}" alt="arrow">
+                                        </div>
+                                    </div>
+
+                                    <ul class="product__mobile-preview swiper3 swiper">
+                                        <div class="swiper-wrapper">
+                                            <li class="mobile-preview-item swiper-slide">
+                                                <img alt="img1" src="{% static 'assets/imgs/product-slide.png' %}" />
+                                            </li>
+                                            <li class="mobile-preview-item swiper-slide">
+                                                <img alt="img1" src="{% static 'assets/imgs/product-slide.png' %}" />
+                                            </li>
+                                            <li class="mobile-preview-item swiper-slide">
+                                                <img alt="img1" src="{% static 'assets/imgs/product-slide.png' %}" />
+                                            </li>
+                                            <li class="mobile-preview-item swiper-slide">
+                                                <img alt="img1" src="{% static 'assets/imgs/product-slide.png' %}" />
+                                            </li>
+                                        </div>
+                                    </ul>
+
+                                </div>
+                                <div class="product__properties">
+                                    <div class="properties__column">
+                                        <div class="properties__item">
+                                            <p>Основная категория:</p>
+                                            <span>
+                                                <a href="#">Одежда и акксесуары</a>
+                                                <svg class="svg none blue">
+                                                    <use xlink:href="favorite-blue.svg#favorite-blue"></use>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="properties__item">
+                                            <p>Бренд:</p>
+                                            <span>
+                                                <a href="#">ZOLA</a>
+                                                <svg class="svg none blue">
+                                                    <use xlink:href="favorite-blue.svg#favorite-blue"></use>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="properties__item">
+                                            <p>Продавец:</p>
+                                            <span>
+                                                <a href="#">ИП Мухамедов А.А.</a>
+                                                <svg class="svg none blue">
+                                                    <use xlink:href="favorite-blue.svg#favorite-blue"></use>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="properties__item">
+                                            <p>Цена, ₽:</p>
+                                            <span>
+                                                <p>350</p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="properties__column">
+                                        <div class="properties__item right">
+                                            <p>Перспективность:</p>
+                                            <span>
+                                                <div class="effectivity">
+                                                    <svg class="table-svg green">
+                                                        <use xlink:href="table.svg#perspective"></use>
+                                                    </svg>
+                                                    <svg class="table-svg green">
+                                                        <use xlink:href="table.svg#perspective"></use>
+                                                    </svg>
+                                                    <svg class="table-svg green">
+                                                        <use xlink:href="table.svg#perspective"></use>
+                                                    </svg>
+                                                    <svg class="table-svg green">
+                                                        <use xlink:href="table.svg#perspective"></use>
+                                                    </svg>
+                                                    <svg class="table-svg green">
+                                                        <use xlink:href="table.svg#perspective"></use>
+                                                    </svg>
+                                                </div>
+                                            </span>
+                                        </div>
+                                        <div class="properties__item right">
+                                            <p>Выкуп, %:</p>
+                                            <span>
+                                                <p>99,9</p>
+                                            </span>
+                                        </div>
+                                        <div class="properties__item right">
+                                            <p>Комиссия МП, %:</p>
+                                            <span>
+                                                <p>25</p>
+                                            </span>
+                                        </div>
+                                        <div class="properties__item right">
+                                            <p>Кол-во, шт:</p>
+                                            <span>
+                                                <p>1000</p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <a href="#!" class="try">
+                                        <p>Попробовать сейчас</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product__analytics ">
+                                <div class="analytics__title">Аналитика товара</div>
+                                <div class="analytics__buttons">
+                                    <button class="analytics__btn">FBO</button>
+                                    <button class="analytics__btn">FBS</button>
+                                </div>
+                                <div class="analytics__period">
+                                    <p class="period__switch">Неделя</p>
+                                    <img src="assets/imgs/periot-dot.svg" alt="">
+                                    <p class="period__switch">Две недели</p>
+                                    <img src="assets/imgs/periot-dot.svg" alt="">
+                                    <p class="period__switch">Месяц</p>
+                                </div>
+                                <div class="dropdown__block">
+                                    <p>Цвет:</p>
+                                    <span>
+                                        <p class="dropdown__title">Все цвета</p>
+                                        <img src="assets/imgs/faq-arrow.svg" alt="">
+                                        <ul class="drop-menu" id="dropmenu">
+                                            <li class="drop-item" data-value="Цвет 1">Цвет 1</li>
+                                            <li class="drop-item" data-value="Цвет 2">Цвет 2</li>
+                                            <li class="drop-item" data-value="Цвет 3">Цвет 3</li>
+                                            <li class="drop-item" data-value="Цвет 4">Цвет 4</li>
+                                        </ul>
+                                    </span>
+                                </div>
+                                <div class="dropdown__block">
+                                    <p>Размер:</p>
+                                    <span>
+                                        <p class="dropdown__title">Все размеры</p>
+                                        <img src="assets/imgs/faq-arrow.svg" alt="">
+                                        <ul class="drop-menu" id="dropmenu">
+                                            <li class="drop-item" data-value="Размер 1">Размер 1</li>
+                                            <li class="drop-item" data-value="Размер 2">Размер 2</li>
+                                            <li class="drop-item" data-value="Размер 3">Размер 3</li>
+                                            <li class="drop-item" data-value="Размер 4">Размер 4</li>
+                                        </ul>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="product__summary">
+                                <div class="summary__overhead ">
+                                    <div class="summary__title">Сводка</div>
+                                    <div class="overhead__period">
+                                        <p class="period__item mob active" id="content">Цена и оборот</p>
+                                        <img src="assets/imgs/periot-dot.svg" alt="">
+                                        <p class="period__item mob">Скидки</p>
+                                        <img src="assets/imgs/periot-dot.svg" alt="">
+                                        <p class="period__item mob">Количество</p>
+                                        <img src="assets/imgs/periot-dot.svg" alt="">
+                                        <p class="period__item mob">Остаток, возвраты и поставки</p>
+                                        <div class="dropdown__block mob">
+                                            <span>
+                                                <p class="dropdown__title">Цена и оборот</p>
+                                                <img src="assets/imgs/faq-arrow.svg" alt="">
+                                                <ul class="drop-menu" id="dropmenu">
+                                                    <li class="drop-item" data-value="Цена и оборот">Цена и оборот</li>
+                                                    <li class="drop-item" data-value="Скидки">Скидки</li>
+                                                    <li class="drop-item" data-value="Количество">Количество</li>
+                                                    <li class="drop-item" data-value="Остаток, возвраты и поставки">
+                                                        Остаток,
+                                                        возвраты и поставки</li>
+                                                </ul>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="summary__features ">
+                                    <div class="feature__item">
+                                        <div class="category__item">
+                                            <p class="item__name">Цена:</p>
+                                        </div>
+                                        <div class="feature__amount" data-value="500" id="feature__amount">500 ₽</div>
+                                    </div>
+                                    <div class="feature__item">
+                                        <div class="category__item">
+                                            <p class="item__name">Оборот по продажам:</p>
+                                        </div>
+                                        <div class="feature__amount">100 000 ₽</div>
+                                    </div>
+                                    <div class="feature__item">
+                                        <div class="category__item">
+                                            <p class="item__name">Оборот по заказам:</p>
+                                        </div>
+                                        <div class="feature__amount">160 350 ₽</div>
+                                    </div>
+                                    <div class="feature__item">
+                                        <div class="category__item">
+                                            <p class="item__name">Оборот по счетчику WB:</p>
+                                        </div>
+                                        <div class="feature__amount">80 150 ₽</div>
+                                    </div>
+                                </div>
+                                <div class="product__chart">
+                                    <canvas id="productChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__main-category  toggle-block" data-name="category">
+                        <div class="category__open-title">
+                            <p>Кроссовки NEW BALANCE</p>
+                        </div>
+                        <div class="category__inner">
+                            <div class="category-chart">
+                                <canvas id="categoryChart"></canvas>
+                            </div>
+                            <div class="category__properties">
+                                <div class="property__column">
+                                    <div class="property__item">
+                                        <div class="property__title">Свободная доля рынка:</div>
+                                        <div class="property__count">200</div>
+                                        <div class="property__rate">
+                                            <span>8/10</span>
+                                            <a href="#">
+                                                <a href="#">
+                                                    <img src="assets/imgs/property-item.svg" alt="">
+                                                    <div class="info__menu">
+                                                        <p>Очень интересное описание
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="property__item">
+                                        <div class="property__title">Кол-во реальных конкурентов:</div>
+                                        <div class="property__count">200</div>
+                                        <div class="property__rate">
+                                            <span>8/10</span>
+                                            <a href="#">
+                                                <a href="#">
+                                                    <img src="assets/imgs/property-item.svg" alt="">
+                                                    <div class="info__menu">
+                                                        <p>Очень интересное описание
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="property__item">
+                                        <div class="property__title">Кол-во отзывов товара в топ 30:</div>
+                                        <div class="property__count">200</div>
+                                        <div class="property__rate">
+                                            <span>8/10</span>
+                                            <a href="#">
+                                                <a href="#">
+                                                    <img src="assets/imgs/property-item.svg" alt="">
+                                                    <div class="info__menu">
+                                                        <p>Очень интересное описание
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="property__item">
+                                        <div class="property__title">Ценовая сегментация:</div>
+                                        <div class="property__count">200</div>
+                                        <div class="property__rate">
+                                            <span>8/10</span>
+                                            <a href="#">
+                                                <a href="#">
+                                                    <img src="assets/imgs/property-item.svg" alt="">
+                                                    <div class="info__menu">
+                                                        <p>Очень интересное описание
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="property__item">
+                                        <div class="property__title">Упущенная выручка:</div>
+                                        <div class="property__count">200</div>
+                                        <div class="property__rate">
+                                            <span>8/10</span>
+                                            <a href="#">
+                                                <a href="#">
+                                                    <img src="assets/imgs/property-item.svg" alt="">
+                                                    <div class="info__menu">
+                                                        <p>Очень интересное описание
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="property__item">
+                                        <div class="property__title">Средний чек:</div>
+                                        <div class="property__count">200000</div>
+                                        <div class="property__rate">
+                                            <span>8/10</span>
+                                            <a href="#">
+                                                <a href="#">
+                                                    <img src="assets/imgs/property-item.svg" alt="">
+                                                    <div class="info__menu">
+                                                        <p>Очень интересное описание
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="property__item">
+                                        <div class="property__title">Доля конкурентов по дате выхода:</div>
+                                        <div class="property__count">200</div>
+                                        <div class="property__rate">
+                                            <span>8/10</span>
+                                            <a href="#">
+                                                <a href="#">
+                                                    <img src="assets/imgs/property-item.svg" alt="">
+                                                    <div class="info__menu">
+                                                        <p>Очень интересное описание
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="property__item">
+                                        <div class="property__title">Процент выкупа:</div>
+                                        <div class="property__count">200</div>
+                                        <div class="property__rate">
+                                            <span>40%</span>
+                                            <a href="#">
+                                                <a href="#">
+                                                    <img src="assets/imgs/property-item.svg" alt="">
+                                                    <div class="info__menu">
+                                                        <p>Очень интересное описание
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#!" class="try">
+                                    <p>Попробовать сейчас</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product__analytics ">
+                            <div class="analytics__title">Аналитика товара</div>
+                            <div class="analytics__buttons">
+                                <button class="analytics__btn">FBO</button>
+                                <button class="analytics__btn">FBS</button>
+                            </div>
+                            <div class="analytics__period">
+                                <p class="period__switch">Неделя</p>
+                                <img src="assets/imgs/periot-dot.svg" alt="">
+                                <p class="period__switch">Две недели</p>
+                                <img src="assets/imgs/periot-dot.svg" alt="">
+                                <p class="period__switch">Месяц</p>
+                            </div>
+                            <div class="dropdown__block">
+                                <p>Цвет:</p>
+                                <span>
+                                    <p class="dropdown__title">Все цвета</p>
+                                    <img src="assets/imgs/faq-arrow.svg" alt="">
+                                    <ul class="drop-menu" id="dropmenu">
+                                        <li class="drop-item" data-value="Цвет 1">Цвет 1</li>
+                                        <li class="drop-item" data-value="Цвет 2">Цвет 2</li>
+                                        <li class="drop-item" data-value="Цвет 3">Цвет 3</li>
+                                        <li class="drop-item" data-value="Цвет 4">Цвет 4</li>
+                                    </ul>
+                                </span>
+                            </div>
+                            <div class="dropdown__block">
+                                <p>Размер:</p>
+                                <span>
+                                    <p class="dropdown__title">Все размеры</p>
+                                    <img src="assets/imgs/faq-arrow.svg" alt="">
+                                    <ul class="drop-menu" id="dropmenu">
+                                        <li class="drop-item" data-value="Размер 1">Размер 1</li>
+                                        <li class="drop-item" data-value="Размер 2">Размер 2</li>
+                                        <li class="drop-item" data-value="Размер 3">Размер 3</li>
+                                        <li class="drop-item" data-value="Размер 4">Размер 4</li>
+                                    </ul>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="product__summary">
+                            <div class="summary__overhead ">
+                                <div class="summary__title">Сводка</div>
+                                <div class="overhead__period">
+                                    <p class="period__item mob active" id="content">Среднее количество проданных товаров
+                                    </p>
+                                    <img src="assets/imgs/periot-dot.svg" alt="">
+                                    <p class="period__item mob">Средний оборот</p>
+                                    <img src="assets/imgs/periot-dot.svg" alt="">
+                                    <p class="period__item mob">Сезонность</p>
+                                    <div class="dropdown__block mob">
+                                        <span>
+                                            <p class="dropdown__title">Среднее количество проданных товаров</p>
+                                            <img src="assets/imgs/faq-arrow.svg" alt="">
+                                            <ul class="drop-menu" id="dropmenu">
+                                                <li class="drop-item">Среднее количество проданных товаров</li>
+                                                <li class="drop-item">Средний оборот</li>
+                                                <li class="drop-item">Сезонность</li>
+                                            </ul>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="summary__features ">
+                                <div class="feature__item">
+                                    <div class="category__item">
+                                        <p class="item__name">Оборот:</p>
+                                    </div>
+                                    <div class="feature__amount">1 624 171 197 ₽</div>
+                                </div>
+                                <div class="feature__item">
+                                    <div class="category__item">
+                                        <p class="item__name">Средний чек:</p>
+                                    </div>
+                                    <div class="feature__amount">1 708 ₽</div>
+                                </div>
+                            </div>
+                            <div class="product__chart">
+                                <canvas id="productChart2"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__main-sellers  toggle-block" data-name="sellers">
+                        <div class="products__title">
+                            <div class="title__text">Продавцы</div>
+                        </div>
+                        <div class="sellers__graph">
+                            <div class="sellers__chart">
+                                <canvas id="sellersChart"></canvas>
+                            </div>
+                            <div class="chart__labels mobile">
+                                <div class="label__column">
+                                    <div class="label__item">
+                                        <p>ООО “ТРУСЫ ЛЮКСОВЫЕ” (555123512315151)</p>
+                                        <span>31 008 888₽ (6%)</span>
+                                    </div>
+                                    <div class="label__item">
+                                        <p>ООО “ТРУСЫ ЛЮКСОВЫЕ” (555123512315151)</p>
+                                        <span>31 008 888₽ (6%)</span>
+                                    </div>
+                                    <div class="label__item">
+                                        <p>ООО “ТРУСЫ ЛЮКСОВЫЕ” (555123512315151)</p>
+                                        <span>31 008 888₽ (6%)</span>
+                                    </div>
+                                    <div class="label__item">
+                                        <p>ООО “ТРУСЫ ЛЮКСОВЫЕ” (555123512315151)</p>
+                                        <span>31 008 888₽ (6%)</span>
+                                    </div>
+                                </div>
+                                <div class="label__column">
+                                    <div class="label__item">
+                                        <p>ООО “ТРУСЫ ЛЮКСОВЫЕ” (555123512315151)</p>
+                                        <span>31 008 888₽ (6%)</span>
+                                    </div>
+                                    <div class="label__item">
+                                        <p>ООО “ТРУСЫ ЛЮКСОВЫЕ” (555123512315151)</p>
+                                        <span>31 008 888₽ (6%)</span>
+                                    </div>
+                                    <div class="label__item">
+                                        <p>ООО “ТРУСЫ ЛЮКСОВЫЕ” (555123512315151)</p>
+                                        <span>31 008 888₽ (6%)</span>
+                                    </div>
+                                    <div class="label__item">
+                                        <p>ООО “ТРУСЫ ЛЮКСОВЫЕ” (555123512315151)</p>
+                                        <span>31 008 888₽ (6%)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__table category-tbl">
+                            <a href="#!" class="try">
+                                <p>Попробовать сейчас</p>
+                            </a>
+                            <div class="table__head">
+                                <table>
+                                    <thead>
+                                        <th class="head__item">Продавец</th>
+                                        <th class="head__item">Товаров (шт)</th>
+                                        <th class="head__item">Кол-во брендов (шт)</th>
+                                        <th class="head__item">Средний рейтинг по продажам</th>
+                                        <th class="head__item">Продажи (шт)</th>
+                                        <th class="head__item">Оборот</th>
+                                    </thead>
+                                </table>
+                            </div>
+                            <div class="table__main">
+                                <table>
+                                    <tbody>
+                                        <tr class="table__row">
+                                            <td class="row__item first">
+                                                <div class="row__item-inner">
+                                                    <img src="assets/imgs/wb.png" alt="">
+                                                    <div class="tabe__item-title">ООО “ТРУСЫ
+                                                        ЛЮКСОВЫЕ”<br>(555123512315151)
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="row__item">186</td>
+                                            <td class="row__item">7</td>
+                                            <td class="row__item">4.8</td>
+                                            <td class="row__item">31 000</td>
+                                            <td class="row__item fourth">31 008 888 ₽</td>
+                                        </tr>
+                                        <tr class="table__row">
+                                            <td class="row__item first">
+                                                <div class="row__item-inner">
+                                                    <img src="assets/imgs/wb.png" alt="">
+                                                    <div class="tabe__item-title">ООО “ТРУСЫ
+                                                        ЛЮКСОВЫЕ”<br>(555123512315151)
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="row__item">186</td>
+                                            <td class="row__item">7</td>
+                                            <td class="row__item">4.8</td>
+                                            <td class="row__item">31 000</td>
+                                            <td class="row__item fourth">31 008 888 ₽</td>
+                                        </tr>
+                                        <tr class="table__row">
+                                            <td class="row__item first">
+                                                <div class="row__item-inner">
+                                                    <img src="assets/imgs/wb.png" alt="">
+                                                    <div class="tabe__item-title">ООО “ТРУСЫ
+                                                        ЛЮКСОВЫЕ”<br>(555123512315151)
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="row__item">186</td>
+                                            <td class="row__item">7</td>
+                                            <td class="row__item">4.8</td>
+                                            <td class="row__item">31 000</td>
+                                            <td class="row__item fourth">31 008 888 ₽</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__main-brands  toggle-block" data-name="brands">
+                        <div class="products__title">
+                            <div class="title__text">Бренды</div>
+                        </div>
+                        <div class="brands__graph">
+                            <div class="brands__chart">
+                                <canvas id="brandsChart"></canvas>
+                            </div>
+                            <div class="chart__labels">
+                                <div class="label__column">
+                                    <div class="label__item">
+                                        <p>ZARINA</p>
+                                        <span>31 008 888₽ (6%)</span>
+                                    </div>
+                                    <div class="label__item">
+                                        <p>ZARINA</p>
+                                        <span>31 008 888₽ (6%)</span>
+                                    </div>
+                                    <div class="label__item">
+                                        <p>ZARINA</p>
+                                        <span>31 008 888₽ (6%)</span>
+                                    </div>
+                                    <div class="label__item">
+                                        <p>ZARINA</p>
+                                        <span>31 008 888₽ (6%)</span>
+                                    </div>
+                                </div>
+                                <div class="label__column">
+                                    <div class="label__item">
+                                        <p>ZARINA</p>
+                                        <span>31 008 888₽ (6%)</span>
+                                    </div>
+                                    <div class="label__item">
+                                        <p>ZARINA</p>
+                                        <span>31 008 888₽ (6%)</span>
+                                    </div>
+                                    <div class="label__item">
+                                        <p>ZARINA</p>
+                                        <span>31 008 888₽ (6%)</span>
+                                    </div>
+                                    <div class="label__item">
+                                        <p>ZARINA</p>
+                                        <span>31 008 888₽ (6%)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__table category-tbl">
+                            <a href="#!" class="try">
+                                <p>Попробовать сейчас</p>
+                            </a>
+                            <div class="table__head">
+                                <table>
+                                    <thead>
+                                        <th class="head__item">Бренд</th>
+                                        <th class="head__item">Товаров (шт)</th>
+                                        <th class="head__item">Рейтинг</th>
+                                        <th class="head__item">Средний чек</th>
+                                        <th class="head__item">Продажи (шт)</th>
+                                        <th class="head__item">Оборот</th>
+                                        <th class="head__item"></th>
+                                    </thead>
+                                </table>
+                            </div>
+                            <div class="table__main">
+                                <table>
+                                    <tbody>
+                                        <tr class="table__row">
+                                            <td class="row__item first">
+                                                <div class="row__item-inner">
+                                                    <img src="assets/imgs/wb.png" alt="">
+                                                    <div class="tabe__item-title">ZARINA</div>
+                                                </div>
+                                            </td>
+                                            <td class="row__item">186</td>
+                                            <td class="row__item">7</td>
+                                            <td class="row__item">4.8</td>
+                                            <td class="row__item">31 000</td>
+                                            <td class="row__item fourth">31 008 888 ₽</td>
+                                            <td class="row__item">
+                                                <svg class="svg none">
+                                                    <use xlink:href="favorite.svg#favorite"></use>
+                                                </svg>
+                                            </td>
+                                        </tr>
+                                        <tr class="table__row">
+                                            <td class="row__item first">
+                                                <div class="row__item-inner">
+                                                    <img src="assets/imgs/wb.png" alt="">
+                                                    <div class="tabe__item-title">ZARINA</div>
+                                                </div>
+                                            </td>
+                                            <td class="row__item">186</td>
+                                            <td class="row__item">7</td>
+                                            <td class="row__item">4.8</td>
+                                            <td class="row__item">31 000</td>
+                                            <td class="row__item fourth">31 008 888 ₽</td>
+                                            <td class="row__item">
+                                                <svg class="svg none">
+                                                    <use xlink:href="favorite.svg#favorite"></use>
+                                                </svg>
+                                            </td>
+                                        </tr>
+                                        <tr class="table__row">
+                                            <td class="row__item first">
+                                                <div class="row__item-inner">
+                                                    <img src="assets/imgs/wb.png" alt="">
+                                                    <div class="tabe__item-title">ZARINA</div>
+                                                </div>
+                                            </td>
+                                            <td class="row__item">186</td>
+                                            <td class="row__item">7</td>
+                                            <td class="row__item">4.8</td>
+                                            <td class="row__item">31 000</td>
+                                            <td class="row__item fourth">31 008 888 ₽</td>
+                                            <td class="row__item">
+                                                <svg class="svg none">
+                                                    <use xlink:href="favorite.svg#favorite"></use>
+                                                </svg>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__main-task  toggle-block" data-name="task">
+                        <div class="product__page-title ">
+                            <p>Какое-то очень интересное название таска</p>
+                        </div>
+                        <div class="product__information">
+                            <div class="product__preview">
+                                <div class="product__photo">
+                                    <div class="product__gallery" id="lightgallery">
+                                        <a href="assets/imgs/product-preview-01.png">
+                                            <img alt="img1" src="assets/imgs/product-preview-01.png" />
+                                        </a>
+                                        <a href="assets/imgs/product-preview-02.png">
+                                            <img alt="img1" src="assets/imgs/product-preview-02.png" />
+                                        </a>
+                                        <a href="assets/imgs/product-preview-03.png">
+                                            <img alt="img1" src="assets/imgs/product-preview-03.png" />
+                                        </a>
+                                        <a href="assets/imgs/product-preview.png">
+                                            <img alt="img1" src="assets/imgs/product-preview.png" />
+                                        </a>
+                                    </div>
+                                    <div class="gallery-arrow">
+                                        <img src="assets/imgs/gallery-arrow.svg" alt="arrow">
+                                    </div>
+                                </div>
+
+                                <ul class="product__mobile-preview swiper3 swiper">
+                                    <div class="swiper-wrapper">
+                                        <li class="mobile-preview-item swiper-slide">
+                                            <img alt="img1" src="assets/imgs/product-slide.png" />
+                                        </li>
+                                        <li class="mobile-preview-item swiper-slide">
+                                            <img alt="img1" src="assets/imgs/product-slide.png" />
+                                        </li>
+                                        <li class="mobile-preview-item swiper-slide">
+                                            <img alt="img1" src="assets/imgs/product-slide.png" />
+                                        </li>
+                                        <li class="mobile-preview-item swiper-slide">
+                                            <img alt="img1" src="assets/imgs/product-slide.png" />
+                                        </li>
+                                    </div>
+                                </ul>
+
+                            </div>
+                            <div class="product__properties">
+                                <div class="properties__column">
+                                    <div class="properties__item task-open">
+                                        <span>Название товара:</span>
+                                        <p>Кардиган женский</p>
+                                    </div>
+                                    <div class="properties__item task-open">
+                                        <span>Дата создания таска:</span>
+                                        <p>07.07.2023</p>
+                                    </div>
+                                    <div class="properties__item task-open">
+                                        <span>Кол-во найденных товаров:</span>
+                                        <p>3200</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="task-products">
+                            <a href="#" class="try">
+                                <p>Попробуйте сейчас</p>
+                            </a>
+                            <div class="task-row">
+                                <div class="task__item">
+                                    <div class="item__inner">
+                                        <div class="task-preview">
+                                            <img src="assets/imgs/product-preview-01.png" alt="">
+                                        </div>
+                                        <ul class="task__product-properties">
+                                            <li class="product__property">
+                                                <span>Название товара:</span>
+                                                <p class="blue">Кардиган женский, ограниченная...</p>
+                                            </li>
+                                            <li class="product__property">
+                                                <span>Пробная партия (1шт):</span>
+                                                <p>200 ₽</p>
+                                            </li>
+                                            <li class="product__property mobile">
+                                                <span>Поставщик:</span>
+                                                <img src="assets/imgs/property-task.png" alt="">
+                                            </li>
+                                            <li class="product__property">
+                                                <span>Дата нахождения товара:</span>
+                                                <p>07.07.2023</p>
+                                            </li>
+                                            <li class="product__property price-change">
+                                                <span>Цена товара:</span>
+                                                <div class="price">
+                                                    <p>400₽ - 800₽</p>
+                                                    <img src="assets/imgs/price.png" alt="">
+                                                    <b>+10%</b>
+                                                </div>
+                                            </li>
+                                            <li class="product__property mobile">
+                                                <span>Минимальное кол-во:</span>
+                                                <p>100 шт</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="prop-mob">
+                                        <li class="product__property">
+                                            <span>Поставщик:</span>
+                                            <img src="assets/imgs/property-task.png" alt="">
+                                        </li>
+                                        <li class="product__property">
+                                            <span>Мин. кол-во:</span>
+                                            <p>1000</p>
+                                        </li>
+                                    </div>
+                                </div>
+                                <div class="task__item">
+                                    <div class="item__inner">
+                                        <div class="task-preview">
+                                            <img src="assets/imgs/product-preview-01.png" alt="">
+                                        </div>
+                                        <ul class="task__product-properties">
+                                            <li class="product__property">
+                                                <span>Название товара:</span>
+                                                <p class="blue">Кардиган женский, ограниченная...</p>
+                                            </li>
+                                            <li class="product__property">
+                                                <span>Пробная партия (1шт):</span>
+                                                <p>200 ₽</p>
+                                            </li>
+                                            <li class="product__property mobile">
+                                                <span>Поставщик:</span>
+                                                <img src="assets/imgs/property-task.png" alt="">
+                                            </li>
+                                            <li class="product__property">
+                                                <span>Дата нахождения товара:</span>
+                                                <p>07.07.2023</p>
+                                            </li>
+                                            <li class="product__property price-change">
+                                                <span>Цена товара:</span>
+                                                <div class="price">
+                                                    <p>400₽ - 800₽</p>
+                                                    <img src="assets/imgs/price.png" alt="">
+                                                    <b>+10%</b>
+                                                </div>
+                                            </li>
+                                            <li class="product__property mobile">
+                                                <span>Минимальное кол-во:</span>
+                                                <p>100 шт</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="prop-mob">
+                                        <li class="product__property">
+                                            <span>Поставщик:</span>
+                                            <img src="assets/imgs/property-task.png" alt="">
+                                        </li>
+                                        <li class="product__property">
+                                            <span>Мин. кол-во:</span>
+                                            <p>1000</p>
+                                        </li>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img class="product-bg" src="{% static 'assets/imgs/product-bg.png' %}" alt="Задний фон">
+            </section>
+
+            <section class="tarif">
+                <div class="container">
+                    <div class="tarif__overhead">
+                        <div class="section__header leftside">
+                            <p class="section__overtitle leftside">Тарифы</p>
+                            <h1 class="section__title">Продаем софт для чего-то интересного для чего не придумал</h1>
+                        </div>
+                        <div class="tarif__subtitle">
+                            <p>Разнообразный и богатый опыт постоянное информационно-пропагандистское обеспечение нашей
+                                деятельности позволяет выполнять важные</p>
+                        </div>
+                    </div>
+                    <div class="tarif__plans">
+                        <div class="tarif__card">
+                            <p class="card__overtitle">1 месяц</p>
+                            <h2 class="card__title">Базовый тариф</h2>
+                            <p class="card__subtitle">Комплекс мероприятий, включая консалтинговые
+                                обследование:</p>
+                            <h3 class="card__price">98.000 р/мес</h3>
+                            <ul class="card__features">
+                                <li class="card__feature">
+                                    <p class="feature__name">
+                                        Аналитика товаров:
+                                    </p>
+                                    <p class="feature__desc">300 в день</p>
+                                </li>
+                                <li class="card__feature">
+                                    <p class="feature__name">
+                                        Аналитика категория:
+                                    </p>
+                                    <p class="feature__desc">300 в день</p>
+                                </li>
+                                <li class="card__feature">
+                                    <p class="feature__name">
+                                        Аналитика брендов:
+                                    </p>
+                                    <p class="feature__desc">300 в день</p>
+                                </li>
+                                <li class="card__feature">
+                                    <p class="feature__name">
+                                        Аналитика продавцов:
+                                    </p>
+                                    <p class="feature__desc">300 в день</p>
+                                </li>
+                                <li class="card__feature">
+                                    <p class="feature__name">
+                                        Готовый анализ ниш:
+                                    </p>
+                                    <p class="feature__desc">300 в день</p>
+                                </li>
+                                <li class="card__feature">
+                                    <p class="feature__name">
+                                        Генератор карточек товара:
+                                    </p>
+                                    <p class="feature__desc">300 в день</p>
+                                </li>
+                                <li class="card__feature">
+                                    <p class="feature__name">
+                                        Подбор похожих товаров на сайтах Alibaba, 1688:
+                                    </p>
+                                    <img src="assets/imgs/card-desc.svg" alt="Галочка">
+                                </li>
+                                <li class="card__feature">
+                                    <p class="feature__name">
+                                        Поиск похожих товаров:
+                                    </p>
+                                    <img src="assets/imgs/card-desc.svg" alt="Галочка">
+
+                                </li>
+                                <li class="card__feature">
+                                    <p class="feature__name">
+                                        Отслеживание новых товаров:</p>
+                                    <img src="assets/imgs/card-desc.svg" alt="Галочка">
+
+                                </li>
+                            </ul>
+                            <a href="#" class="card__button">
+                                <p>Выбрать тариф</p>
+                            </a>
+                        </div>
+                        <div class="tarif__card middle">
+                            <p class="card__overtitle">1 месяц</p>
+                            <h2 class="card__title">Базовый тариф</h2>
+                            <p class="card__subtitle">Комплекс мероприятий, включая консалтинговые
+                                обследование:</p>
+                            <h3 class="card__price">98.000 р/мес</h3>
+                            <ul class="card__features">
+                                <li class="card__feature">
+                                    <p class="feature__name">
+                                        Аналитика товаров:
+                                    </p>
+                                    <p class="feature__desc">300 в день</p>
+                                </li>
+                                <li class="card__feature">
+                                    <p class="feature__name">
+                                        Аналитика категория:
+                                    </p>
+                                    <p class="feature__desc">300 в день</p>
+                                </li>
+                                <li class="card__feature">
+                                    <p class="feature__name">
+                                        Аналитика брендов:
+                                    </p>
+                                    <p class="feature__desc">300 в день</p>
+                                </li>
+                                <li class="card__feature">
+                                    <p class="feature__name">
+                                        Аналитика продавцов:
+                                    </p>
+                                    <p class="feature__desc">300 в день</p>
+                                </li>
+                                <li class="card__feature">
+                                    <p class="feature__name">
+                                        Готовый анализ ниш:
+                                    </p>
+                                    <p class="feature__desc">300 в день</p>
+                                </li>
+                                <li class="card__feature">
+                                    <p class="feature__name">
+                                        Генератор карточек товара:
+                                    </p>
+                                    <p class="feature__desc">300 в день</p>
+                                </li>
+                                <li class="card__feature">
+                                    <p class="feature__name">
+                                        Подбор похожих товаров на сайтах Alibaba, 1688:
+                                    </p>
+                                    <img src="assets/imgs/card-desc.svg" alt="Галочка">
+                                </li>
+                                <li class="card__feature">
+                                    <p class="feature__name">
+                                        Поиск похожих товаров:
+                                    </p>
+                                    <img src="assets/imgs/card-desc.svg" alt="Галочка">
+
+                                </li>
+                                <li class="card__feature">
+                                    <p class="feature__name">
+                                        Отслеживание новых товаров:</p>
+                                    <img src="assets/imgs/card-desc.svg" alt="Галочка">
+
+                                </li>
+                            </ul>
+                            <a href="#" class="card__button">
+                                <p>Выбрать тариф</p>
+                            </a>
+                        </div>
+                        <div class="tarif__card">
+                            <p class="card__overtitle">1 месяц</p>
+                            <h2 class="card__title">Базовый тариф</h2>
+                            <p class="card__subtitle">Комплекс мероприятий, включая консалтинговые
+                                обследование:</p>
+                            <h3 class="card__price">98.000 р/мес</h3>
+                            <ul class="card__features">
+                                <li class="card__feature">
+                                    <p class="feature__name">
+                                        Аналитика товаров:
+                                    </p>
+                                    <p class="feature__desc">300 в день</p>
+                                </li>
+                                <li class="card__feature">
+                                    <p class="feature__name">
+                                        Аналитика категория:
+                                    </p>
+                                    <p class="feature__desc">300 в день</p>
+                                </li>
+                                <li class="card__feature">
+                                    <p class="feature__name">
+                                        Аналитика брендов:
+                                    </p>
+                                    <p class="feature__desc">300 в день</p>
+                                </li>
+                                <li class="card__feature">
+                                    <p class="feature__name">
+                                        Аналитика продавцов:
+                                    </p>
+                                    <p class="feature__desc">300 в день</p>
+                                </li>
+                                <li class="card__feature">
+                                    <p class="feature__name">
+                                        Готовый анализ ниш:
+                                    </p>
+                                    <p class="feature__desc">300 в день</p>
+                                </li>
+                                <li class="card__feature">
+                                    <p class="feature__name">
+                                        Генератор карточек товара:
+                                    </p>
+                                    <p class="feature__desc">300 в день</p>
+                                </li>
+                                <li class="card__feature">
+                                    <p class="feature__name">
+                                        Подбор похожих товаров на сайтах Alibaba, 1688:
+                                    </p>
+                                    <img src="assets/imgs/card-desc.svg" alt="Галочка">
+                                </li>
+                                <li class="card__feature">
+                                    <p class="feature__name">
+                                        Поиск похожих товаров:
+                                    </p>
+                                    <img src="assets/imgs/card-desc.svg" alt="Галочка">
+
+                                </li>
+                                <li class="card__feature">
+                                    <p class="feature__name">
+                                        Отслеживание новых товаров:</p>
+                                    <img src="assets/imgs/card-desc.svg" alt="Галочка">
+
+                                </li>
+                            </ul>
+                            <a href="#" class="card__button">
+                                <p>Выбрать тариф</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="clients" id="clients">
+                <div class="container">
+                    <div class="clients__inner">
+
+                        <div class="section__header leftside active">
+                            <div id="clientsBlock">
+                                <p class="section__overtitle leftside">Наши клиенты</p>
+                                <h1 class="section__title">Клиенты выбирают E-metrics</h1>
+                                <p class="section__subtitle">We provide a range of categories to help you choose courses
+                                    that
+                                    fit your expertise. More than 3.2K courses will guide you from basic.</p>
+                            </div>
+                        </div>
+
+                        <ul class="clients__list swiper mob">
+                            <div class="swiper-wrapper">
+                                <li class="clients__review swiper-slide">
+                                    <div class="author__photo">
+                                        <img class="author__photo" src="{% static 'assets/imgs/author__photo.png' %}"
+                                            alt="Фото клиента">
+                                    </div>
+                                    <p class="author__name">Анна Каренина</p>
+                                    <p class="author__text">We provide a range to help you choose courses that fit your
+                                        expertise. More than 3.2K courses will guide from basic.</p>
+                                </li>
+                                <li class="clients__review swiper-slide">
+                                    <div class="author__photo">
+                                        <img class="author__photo" src="{% static 'assets/imgs/author__photo.png' %}"
+                                            alt="Фото клиента">
+                                    </div>
+                                    <p class="author__name">Анна Каренина</p>
+                                    <p class="author__text">We provide a range to help you choose courses that fit your
+                                        expertise. More than 3.2K courses will guide from basic.</p>
+                                </li>
+                                <li class="clients__review swiper-slide">
+                                    <div class="author__photo">
+                                        <img class="author__photo" src="{% static 'assets/imgs/author__photo.png' %}"
+                                            alt="Фото клиента">
+                                    </div>
+                                    <p class="author__name">Анна Каренина</p>
+                                    <p class="author__text">We provide a range to help you choose courses that fit your
+                                        expertise. More than 3.2K courses will guide from basic.</p>
+                                </li>
+                                <li class="clients__review swiper-slide">
+                                    <div class="author__photo">
+                                        <img class="author__photo" src="{% static 'assets/imgs/author__photo.png' %}"
+                                            alt="Фото клиента">
+                                    </div>
+                                    <p class="author__name">Анна Каренина</p>
+                                    <p class="author__text">We provide a range to help you choose courses that fit your
+                                        expertise. More than 3.2K courses will guide from basic.</p>
+                                </li>
+                                <li class="clients__review swiper-slide">
+                                    <div class="author__photo">
+                                        <img class="author__photo" src="{% static 'assets/imgs/author__photo.png' %}"
+                                            alt="Фото клиента">
+                                    </div>
+                                    <p class="author__name">Анна Каренина</p>
+                                    <p class="author__text">We provide a range to help you choose courses that fit your
+                                        expertise. More than 3.2K courses will guide from basic.</p>
+                                </li>
+                                <li class="clients__review swiper-slide">
+                                    <div class="author__photo">
+                                        <img class="author__photo" src="{% static 'assets/imgs/author__photo.png' %}"
+                                            alt="Фото клиента">
+                                    </div>
+                                    <p class="author__name">Анна Каренина</p>
+                                    <p class="author__text">We provide a range to help you choose courses that fit your
+                                        expertise. More than 3.2K courses will guide from basic.</p>
+                                </li>
+                            </div>
+                        </ul>
+
+                        <ul class="clients__list pc">
+                            <li class="clients__review">
+                                <div class="author__photo">
+                                    <img class="author__photo" src="{% static 'assets/imgs/author__photo.png' %}" alt="Фото клиента">
+                                </div>
+                                <p class="author__name">Анна Каренина</p>
+                                <p class="author__text">We provide a range to help you choose courses that fit your
+                                    expertise. More than 3.2K courses will guide from basic.</p>
+                            </li>
+                            <li class="clients__review ">
+                                <div class="author__photo">
+                                    <img class="author__photo" src="{% static 'assets/imgs/author__photo.png' %}" alt="Фото клиента">
+                                </div>
+                                <p class="author__name">Анна Каренина</p>
+                                <p class="author__text">We provide a range to help you choose courses that fit your
+                                    expertise. More than 3.2K courses will guide from basic.</p>
+                            </li>
+                            <li class="clients__review ">
+                                <div class="author__photo">
+                                    <img class="author__photo" src="{% static 'assets/imgs/author__photo.png' %}" alt="Фото клиента">
+                                </div>
+                                <p class="author__name">Анна Каренина</p>
+                                <p class="author__text">We provide a range to help you choose courses that fit your
+                                    expertise. More than 3.2K courses will guide from basic.</p>
+                            </li>
+                            <li class="clients__review ">
+                                <div class="author__photo">
+                                    <img class="author__photo" src="{% static 'assets/imgs/author__photo.png' %}" alt="Фото клиента">
+                                </div>
+                                <p class="author__name">Анна Каренина</p>
+                                <p class="author__text">We provide a range to help you choose courses that fit your
+                                    expertise. More than 3.2K courses will guide from basic.</p>
+                            </li>
+                            <li class="clients__review ">
+                                <div class="author__photo">
+                                    <img class="author__photo" src="{% static 'assets/imgs/author__photo.png' %}" alt="Фото клиента">
+                                </div>
+                                <p class="author__name">Анна Каренина</p>
+                                <p class="author__text">We provide a range to help you choose courses that fit your
+                                    expertise. More than 3.2K courses will guide from basic.</p>
+                            </li>
+                            <li class="clients__review ">
+                                <div class="author__photo">
+                                    <img class="author__photo" src="{% static 'assets/imgs/author__photo.png' %}" alt="Фото клиента">
+                                </div>
+                                <p class="author__name">Анна Каренина</p>
+                                <p class="author__text">We provide a range to help you choose courses that fit your
+                                    expertise. More than 3.2K courses will guide from basic.</p>
+                            </li>
+                        </ul>
+
+                    </div>
+                    </ul>
+                </div>
+    </div>
+    </section>
+
+    <section class="faq">
+        <div class="container">
+            <div class="faq__overhead">
+                <div class="section__header leftside">
+                    <p class="section__overtitle leftside">FAQ</p>
+                    <h1 class="section__title">Ответы на часто задаваемые вопросы</h1>
+                    <p class="section__subtitle">We provide a range of categories to help you choose courses
+                        that
+                        fit your expertise. More than 3.2K courses will guide you from basic.</p>
+                </div>
+                <a href="#" class="faq__button">
+                    <p>Задать вопрос</p>
+                </a>
+            </div>
+            <div class="faq__inner">
+                <div class="faq__image">
+                    <img src="{% static 'assets/imgs/faq-photo.png' %}" alt="Фото">
+                </div>
+                <div class="faq__answers">
+                    <div class="faq__answer">
+                        <h2 class="faq__title">Какой-то очень интересный вопрос</h2>
+                        <div class="faq__text">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium dolorum
+                                sunt suscipit cumque sequi at iusto culpa veniam vero, distinctio recusandae id
+                                harum possimus libero. Iusto provident sit dicta autem voluptate, laboriosam
+                                repudiandae doloribus consequuntur harum et, labore in eligendi?</p>
+                        </div>
+                    </div>
+                    <div class="faq__answer">
+                        <h2 class="faq__title">Какой-то очень интересный вопрос</h2>
+                        <div class="faq__text">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium dolorum
+                                sunt suscipit cumque sequi at iusto culpa veniam vero, distinctio recusandae id
+                                harum possimus libero. Iusto provident sit dicta autem voluptate, laboriosam
+                                repudiandae doloribus consequuntur harum et, labore in eligendi?</p>
+                        </div>
+                    </div>
+                    <div class="faq__answer">
+                        <h2 class="faq__title">Какой-то очень интересный вопрос</h2>
+                        <div class="faq__text">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium dolorum
+                                sunt suscipit cumque sequi at iusto culpa veniam vero, distinctio recusandae id
+                                harum possimus libero. Iusto provident sit dicta autem voluptate, laboriosam
+                                repudiandae doloribus consequuntur harum et, labore in eligendi?</p>
+                        </div>
+                    </div>
+                    <div class="faq__answer">
+                        <h2 class="faq__title">Какой-то очень интересный вопрос</h2>
+                        <div class="faq__text">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium dolorum
+                                sunt suscipit cumque sequi at iusto culpa veniam vero, distinctio recusandae id
+                                harum possimus libero. Iusto provident sit dicta autem voluptate, laboriosam
+                                repudiandae doloribus consequuntur harum et, labore in eligendi?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="section__header">
+                <h1 class="section__title footer-title">Узнайте, под какое направление подходит ваш проект</h1>
+                <p class="section__subtitle footer-subtitle">Для малых и средних предприятий и предпринимателей</p>
+            </div>
+            <div class="footer__inner">
+                <div class="footer__buttons">
+                    <a href="#" class="footer__btn try-btn">
+                        <p>Попробовать бесплатно</p>
+                    </a>
+                    <a href="#" class="footer__btn connect-btn">
+                        <p>Связаться с нами</p>
+                    </a>
+                </div>
+                <div class="footer__info">
+                    <div class="footer__leftside">
+                        <a href="">
+                            <img src="{% static 'assets/imgs/Header-Logo.svg' %}" alt="Логотип" class="footer__logo">
+                        </a>
+                        <p class="footer__text">E-metrics is a global online learning platform that offers anyone,
+                            anywhere access to online courses</p>
+                        <a href="#" class="footer__politic">
+                            <p>Политика конфиденциальности</p>
+                        </a>
+                    </div>
+                    <div class="footer__rightside">
+                        <nav class="footer__nav">
+                            <ul class="footer-menu">
+                                <li class="footer-menu-item">
+                                    <a class="footer-link" href="#">О продукте</a>
+                                </li>
+                                <li class="footer-menu-item">
+                                    <a class="footer-link" href="#">Тарифы</a>
+                                </li>
+                                <li class="footer-menu-item">
+                                    <a class="footer-link" href="#">Отзывы</a>
+                                </li>
+                                <li class="footer-menu-item">
+                                    <a class="footer-link" href="blog">Блог</a>
+                                </li>
+                                <li class="footer-menu-item">
+                                    <a class="footer-link" href="#">FAQ</a>
+                                </li>
+                                <li class="footer-menu-item">
+                                    <a class="footer-link" href="contacts">Контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="footer__contacts">
+                            <div class="contacts__item">
+                                <p>Телефон:</p>
+                                <a href="tel:+79999999999">+7 (999) 999-99-99</a>
+                            </div>
+                            <div class="contacts__item">
+                                <p>E-mail:</p>
+                                <a href="mailto:emailpochta@gmail.com">emailpochta@gmail.com</a>
+                            </div>
+                            <div class="contacts__address">
+                                <p>г. Москва, ул. Пушкина 25, 33</p>
+                            </div>
+                            <a href="#" class="footer__politic mob">
+                                <p>Политика конфиденциальности</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__socials">
+                    <p class="footer_copypaste">©2023 e-metrics. All rights reserved</p>
+                    <div class="social__links">
+                        <a href="#">
+                            <img src="{% static 'assets/imgs/telegram.svg' %}" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="{% static 'assets/imgs/telegram.svg' %}" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="{% static 'assets/imgs/telegram.svg' %}" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="{% static 'assets/imgs/telegram.svg' %}" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{% static 'javascript/lightgallery.min.js' %}"></script>
+    <script src="{% static 'javascript/slider.js' %}"></script>
+    <script src="{% static 'javascript/app.js' %}"></script>
+</body>
+
+</html>

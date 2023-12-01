@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-metrics</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+</head>
+
+<body>
+    <div class="wrapper white">
+        <header class="header cabinet">
+            <div class="container cabinet">
+                <div class="header__inner">
+                    <div class="header__left">
+                        <div class="header__burger cabinet" id="cabinet-burger">
+                            <span></span>
+                        </div>
+                        <a href="index.html" class="header__logo cabinet">
+                            <img src="assets/imgs/Header-Logo.svg" alt="Логотип" />
+                        </a>
+                        <div class="header__search">
+                            <input class="header__input" type="text" placeholder="Поиск" />
+                            <img class="header__search-ico" src="assets/imgs/search.svg" alt="Поиск" />
+                        </div>
+                    </div>
+
+                    <div class="header__right">
+                        <a href="#!" class="header__profile">
+                            <img class="profile__photo" src="assets/imgs/test.jpg" alt="Профиль" />
+                            <a href="#" class="profile__section">
+                                <div class="profile__name">Антон Александров</div>
+                                <img src="assets/imgs/profile-arrow.svg" alt="Стрелка" />
+                                <ul class="drop-menu" id="dropmenu">
+                                    <li class="drop-item">Настройки</li>
+                                    <li class="drop-item">Выйти</li>
+                                    <li class="drop-item">1</li>
+                                    <li class="drop-item">2</li>
+                                </ul>
+                            </a>
+                        </a>
+                        <a href="#!" class="profile__notification">
+                            <img src="assets/imgs/notifications.svg" alt="Уведомления" />
+                            <img class="header__search-ico" src="assets/imgs/search.svg" alt="Поиск" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main cabinet">
+            <div class="product__inner">
+                <div class="cabinet__sidebar">
+                    <div class="sidebar__inner">
+                        <div class="sidebar__section">
+                            <div class="sidebar__title">Аналитика</div>
+                            <ul class="sidebar__list">
+                                <li class="sidebar__item">
+                                    <a href="products.html">
+                                        <svg>
+                                            <use xlink:href="sprite.svg#product"></use>
+                                        </svg>
+                                        <p>Товары</p>
+                                    </a>
+                                </li>
+                                <li class="sidebar__item">
+                                    <a href="categories.html">
+                                        <svg>
+                                            <use xlink:href="sprite.svg#category"></use>
+                                        </svg>
+                                        <p>Категории / Ниши</p>
+                                    </a>
+                                </li>
+                                <li class="sidebar__item">
+                                    <a href="sellers.html" class="active">
+                                        <svg>
+                                            <use xlink:href="sellers.svg#sellers"></use>
+                                        </svg>
+                                        <p>Продавцы</p>
+                                    </a>
+                                </li>
+                                <li class="sidebar__item">
+                                    <a href="brands.html">
+                                        <svg>
+                                            <use xlink:href="sellers.svg#brands"></use>
+                                        </svg>
+                                        <p>Бренды</p>
+                                    </a>
+                                </li>
+                                <li class="sidebar__item">
+                                    <a href="favorites.html">
+                                        <svg class="none">
+                                            <use xlink:href="favorite.svg#favorite"></use>
+                                        </svg>
+                                        <p>Избранное</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sidebar__section">
+                            <div class="sidebar__title">Поиск товаров</div>
+                            <ul class="sidebar__list">
+                                <li class="sidebar__item">
+                                    <a href="create-task.html">
+                                        <svg class="none">
+                                            <use xlink:href="favorite.svg#addTask"></use>
+                                        </svg>
+                                        <p>Создать таск</p>
+                                    </a>
+                                </li>
+                                <li class="sidebar__item">
+                                    <a href="view-task.html">
+                                        <svg>
+                                            <use xlink:href="viewTask.svg#viewTask"></use>
+                                        </svg>
+                                        <p>Просмотр тасков</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sidebar__section support">
+                            <li class="sidebar__item">
+                                <a href="support.html">
+                                    <svg class="none stroke">
+                                        <use xlink:href="viewTask.svg#support"></use>
+                                    </svg>
+                                    <p>Поддержка</p>
+                                </a>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+                <div class="category__open-page">
+                    <div class="product__page-breadcrumbs ">
+                        <a href="sellers.html">Продавцы</a>
+                        <img src="assets/imgs/breadcrumb-stick.svg" alt="">
+                        <a href="category-open.html">ООО “ВАШЕ”</a>
+                    </div>
+                    <div class="category__open-title">
+                        <p>ООО “ВАШЕ” (555123512315151)</p>
+                        <img src="assets/imgs/wb.png" alt="">
+                    </div>
+                    <div class="product__analytics ">
+                        <div class="analytics__title">Аналитика товара</div>
+                        <div class="analytics__buttons">
+                            <button class="analytics__btn">FBO</button>
+                            <button class="analytics__btn">FBS</button>
+                        </div>
+                        <div class="analytics__period">
+                            <p class="period__switch">Неделя</p>
+                            <img src="assets/imgs/periot-dot.svg" alt="">
+                            <p class="period__switch">Две недели</p>
+                            <img src="assets/imgs/periot-dot.svg" alt="">
+                            <p class="period__switch">Месяц</p>
+                        </div>
+                        <div class="dropdown__block">
+                            <p>Цвет:</p>
+                            <span>
+                                <p class="dropdown__title">Все цвета</p>
+                                <img src="assets/imgs/faq-arrow.svg" alt="">
+                                <ul class="drop-menu" id="dropmenu">
+                                    <li class="drop-item" data-value="Цвет 1">Цвет 1</li>
+                                    <li class="drop-item" data-value="Цвет 2">Цвет 2</li>
+                                    <li class="drop-item" data-value="Цвет 3">Цвет 3</li>
+                                    <li class="drop-item" data-value="Цвет 4">Цвет 4</li>
+                                </ul>
+                            </span>
+                        </div>
+                        <div class="dropdown__block">
+                            <p>Размер:</p>
+                            <span>
+                                <p class="dropdown__title">Все размеры</p>
+                                <img src="assets/imgs/faq-arrow.svg" alt="">
+                                <ul class="drop-menu" id="dropmenu">
+                                    <li class="drop-item" data-value="Размер 1">Размер 1</li>
+                                    <li class="drop-item" data-value="Размер 2">Размер 2</li>
+                                    <li class="drop-item" data-value="Размер 3">Размер 3</li>
+                                    <li class="drop-item" data-value="Размер 4">Размер 4</li>
+                                </ul>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="product__summary">
+                        <div class="summary__overhead ">
+                            <div class="summary__title">Сводка</div>
+                            <div class="overhead__period">
+                                <p class="period__item mob active" id="content">Оборот и средний чек</p>
+                                <img src="assets/imgs/periot-dot.svg" alt="">
+                                <p class="period__item mob">Количество продаж</p>
+                                <img src="assets/imgs/periot-dot.svg" alt="">
+                                <p class="period__item mob">Остатки</p>
+                                <img src="assets/imgs/periot-dot.svg" alt="">
+                                <p class="period__item mob">Распределение числа продаж от цены на товар</p>
+                                <div class="dropdown__block mob">
+                                    <span>
+                                        <p class="dropdown__title">Среднее количество проданных товаров</p>
+                                        <img src="assets/imgs/faq-arrow.svg" alt="">
+                                        <ul class="drop-menu" id="dropmenu">
+                                            <li class="drop-item">Среднее количество проданных товаров</li>
+                                            <li class="drop-item">Средний оборот</li>
+                                            <li class="drop-item">Сезонность</li>
+                                        </ul>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="summary__features ">
+                            <div class="feature__item">
+                                <div class="category__item">
+                                    <p class="item__name">Оборот:</p>
+                                </div>
+                                <div class="feature__amount">1 624 171 197 ₽</div>
+                            </div>
+                            <div class="feature__item">
+                                <div class="category__item">
+                                    <p class="item__name">Средний чек:</p>
+                                </div>
+                                <div class="feature__amount">1 708 ₽</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__chart">
+                        <canvas id="productChart"></canvas>
+                    </div>
+                    <div class="products__title">
+                        <div class="title__text">Список товаров</div>
+                        <div class="title__results">(найдено 25 000 результатов)</div>
+                    </div>
+                    <div class="products__filters category">
+                        <div class="filters__search">
+                            <div class="search__input">
+                                <img src="assets/imgs/search.svg" alt="Поиск" />
+                                <input class="filters__input" type="text" placeholder="Поиск" />
+                            </div>
+                            <div class="search-mob">
+                                <a href="#!" class="search__results">
+                                    <p>Выгрузить результаты</p>
+                                    <img src="assets/imgs/search-results.svg" alt="Скачать результаты" />
+                                </a>
+                                <a href="#!" class="mob-filters">
+                                    <img src="assets/imgs/filters-open.svg" alt="" class="search__results-img-mob">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="drop-block">
+                            <div class="dropdown__block sellers">
+                                <p>Ниша:</p>
+                                <span>
+                                    <p class="dropdown__title">Все</p>
+                                    <img src="assets/imgs/faq-arrow.svg" alt="">
+                                    <ul class="drop-menu" id="dropmenu">
+                                        <li class="drop-item" data-value="Цвет 1">Все</li>
+                                        <li class="drop-item" data-value="Цвет 1">Все</li>
+                                        <li class="drop-item" data-value="Цвет 1">Все</li>
+                                        <li class="drop-item" data-value="Цвет 1">Все</li>
+                                    </ul>
+                                </span>
+                            </div>
+                            <div class="dropdown__block sellers">
+                                <p>Сортировать:</p>
+                                <span>
+                                    <p class="dropdown__title">Дата добавления</p>
+                                    <img src="assets/imgs/faq-arrow.svg" alt="">
+                                    <ul class="drop-menu" id="dropmenu">
+                                        <li class="drop-item" data-value="Цвет 1">Дата д обавления</li>
+                                        <li class="drop-item" data-value="Цвет 2">Дата до авления</li>
+                                        <li class="drop-item" data-value="Цвет 3">Дата добавл ения</li>
+                                        <li class="drop-item" data-value="Цвет 4">Дата добавле ния</li>
+                                    </ul>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__table">
+                        <div class="table__head">
+                            <table>
+                                <thead>
+                                    <th class="head__item first"></th>
+                                    <th class="head__item">Товар</th>
+                                    <th class="head__item">Продавец</th>
+                                    <th class="head__item">Бренд</th>
+                                    <th class="head__item">Цена, ₽</th>
+                                    <th class="head__item">Кол-во, шт</th>
+                                    <th class="head__item">Продажи</th>
+                                    <th class="head__item">Оборот, ₽</th>
+                                    <th class="head__item">Перспективность</th>
+                                    <th class="head__item">Выкуп, %</th>
+                                    <th class="head__item">Комиссия МП, %</th>
+                                </thead>
+                            </table>
+                        </div>
+                        <div class="table__main category-table">
+                            <table>
+                                <tbody>
+                                    <tr class="table__row">
+                                        <td class="row__item first">
+                                            <img src="assets/imgs/table__select.svg" alt="" />
+                                            <svg class="svg none">
+                                                <use xlink:href="favorite.svg#favorite"></use>
+                                            </svg>
+                                        </td>
+                                        <td class="row__item second">
+                                            <div class="row__img">
+                                                <img src="assets/imgs/product-table-img.jpg" alt="" />
+                                            </div>
+                                            <a href="product-page.html" class="table__row-text">
+                                                <div class="table__item-title">
+                                                    Трусы мужские, NIKE<br />
+                                                    ORIGINAL COLLECTION
+                                                </div>
+                                                <div class="table__item-footer">
+                                                    <div class="table__footer-rate">
+                                                        <img src="assets/imgs/table-rate.svg" alt="" />
+                                                        <p>5.0</p>
+                                                        <span>8000 отзывов</span>
+                                                    </div>
+                                                    <div class="table__footer-serial">
+                                                        <img src="assets/imgs/serial-number.png" alt="" />
+                                                        <p>155317299</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td class="row__item third">
+                                            ООО “ТРУСЫ ЛЮКС”<br />1127747058625
+                                        </td>
+                                        <td class="row__item">NIKE</td>
+                                        <td class="row__item">1 200</td>
+                                        <td class="row__item">200</td>
+                                        <td class="row__item">4000</td>
+                                        <td class="row__item">1 200 000</td>
+                                        <td class="row__item fourth">
+                                            <svg class="table-svg green">
+                                                <use xlink:href="table.svg#perspective"></use>
+                                            </svg>
+                                            <svg class="table-svg green">
+                                                <use xlink:href="table.svg#perspective"></use>
+                                            </svg>
+                                            <svg class="table-svg green">
+                                                <use xlink:href="table.svg#perspective"></use>
+                                            </svg>
+                                            <svg class="table-svg green">
+                                                <use xlink:href="table.svg#perspective"></use>
+                                            </svg>
+                                            <svg class="table-svg">
+                                                <use xlink:href="table.svg#perspective"></use>
+                                            </svg>
+                                        </td>
+                                        <td class="row__item">95,7</td>
+                                        <td class="row__item">25</td>
+                                    </tr>
+                                    <tr class="table__row">
+                                        <td class="row__item first">
+                                            <img src="assets/imgs/table__select.svg" alt="" />
+                                            <svg class="svg none">
+                                                <use xlink:href="favorite.svg#favorite"></use>
+                                            </svg>
+                                        </td>
+                                        <td class="row__item second">
+                                            <div class="row__img">
+                                                <img src="assets/imgs/product-table-img.jpg" alt="" />
+                                            </div>
+                                            <a href="product-page.html" class="table__row-text">
+                                                <div class="table__item-title">
+                                                    Трусы мужские, NIKE<br />
+                                                    ORIGINAL COLLECTION
+                                                </div>
+                                                <div class="table__item-footer">
+                                                    <div class="table__footer-rate">
+                                                        <img src="assets/imgs/table-rate.svg" alt="" />
+                                                        <p>5.0</p>
+                                                        <span>8000 отзывов</span>
+                                                    </div>
+                                                    <div class="table__footer-serial">
+                                                        <img src="assets/imgs/serial-number.png" alt="" />
+                                                        <p>155317299</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td class="row__item third">
+                                            ООО “ТРУСЫ ЛЮКС”<br />1127747058625
+                                        </td>
+                                        <td class="row__item">NIKE</td>
+                                        <td class="row__item">1 200</td>
+                                        <td class="row__item">200</td>
+                                        <td class="row__item">4000</td>
+                                        <td class="row__item">1 200 000</td>
+                                        <td class="row__item fourth">
+                                            <svg class="table-svg green">
+                                                <use xlink:href="table.svg#perspective"></use>
+                                            </svg>
+                                            <svg class="table-svg green">
+                                                <use xlink:href="table.svg#perspective"></use>
+                                            </svg>
+                                            <svg class="table-svg green">
+                                                <use xlink:href="table.svg#perspective"></use>
+                                            </svg>
+                                            <svg class="table-svg green">
+                                                <use xlink:href="table.svg#perspective"></use>
+                                            </svg>
+                                            <svg class="table-svg">
+                                                <use xlink:href="table.svg#perspective"></use>
+                                            </svg>
+                                        </td>
+                                        <td class="row__item">95,7</td>
+                                        <td class="row__item">25</td>
+                                    </tr>
+                                    <tr class="table__row">
+                                        <td class="row__item first">
+                                            <img src="assets/imgs/table__select.svg" alt="" />
+                                            <svg class="svg none">
+                                                <use xlink:href="favorite.svg#favorite"></use>
+                                            </svg>
+                                        </td>
+                                        <td class="row__item second">
+                                            <div class="row__img">
+                                                <img src="assets/imgs/product-table-img.jpg" alt="" />
+                                            </div>
+                                            <a href="product-page.html" class="table__row-text">
+                                                <div class="table__item-title">
+                                                    Трусы мужские, NIKE<br />
+                                                    ORIGINAL COLLECTION
+                                                </div>
+                                                <div class="table__item-footer">
+                                                    <div class="table__footer-rate">
+                                                        <img src="assets/imgs/table-rate.svg" alt="" />
+                                                        <p>5.0</p>
+                                                        <span>8000 отзывов</span>
+                                                    </div>
+                                                    <div class="table__footer-serial">
+                                                        <img src="assets/imgs/serial-number.png" alt="" />
+                                                        <p>155317299</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td class="row__item third">
+                                            ООО “ТРУСЫ ЛЮКС”<br />1127747058625
+                                        </td>
+                                        <td class="row__item">NIKE</td>
+                                        <td class="row__item">1 200</td>
+                                        <td class="row__item">200</td>
+                                        <td class="row__item">4000</td>
+                                        <td class="row__item">1 200 000</td>
+                                        <td class="row__item fourth">
+                                            <svg class="table-svg green">
+                                                <use xlink:href="table.svg#perspective"></use>
+                                            </svg>
+                                            <svg class="table-svg green">
+                                                <use xlink:href="table.svg#perspective"></use>
+                                            </svg>
+                                            <svg class="table-svg green">
+                                                <use xlink:href="table.svg#perspective"></use>
+                                            </svg>
+                                            <svg class="table-svg green">
+                                                <use xlink:href="table.svg#perspective"></use>
+                                            </svg>
+                                            <svg class="table-svg">
+                                                <use xlink:href="table.svg#perspective"></use>
+                                            </svg>
+                                        </td>
+                                        <td class="row__item">95,7</td>
+                                        <td class="row__item">25</td>
+                                    </tr>
+                                    <tr class="table__row">
+                                        <td class="row__item first">
+                                            <img src="assets/imgs/table__select.svg" alt="" />
+                                            <svg class="svg none">
+                                                <use xlink:href="favorite.svg#favorite"></use>
+                                            </svg>
+                                        </td>
+                                        <td class="row__item second">
+                                            <div class="row__img">
+                                                <img src="assets/imgs/product-table-img.jpg" alt="" />
+                                            </div>
+                                            <a href="product-page.html" class="table__row-text">
+                                                <div class="table__item-title">
+                                                    Трусы мужские, NIKE<br />
+                                                    ORIGINAL COLLECTION
+                                                </div>
+                                                <div class="table__item-footer">
+                                                    <div class="table__footer-rate">
+                                                        <img src="assets/imgs/table-rate.svg" alt="" />
+                                                        <p>5.0</p>
+                                                        <span>8000 отзывов</span>
+                                                    </div>
+                                                    <div class="table__footer-serial">
+                                                        <img src="assets/imgs/serial-number.png" alt="" />
+                                                        <p>155317299</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td class="row__item third">
+                                            ООО “ТРУСЫ ЛЮКС”<br />1127747058625
+                                        </td>
+                                        <td class="row__item">NIKE</td>
+                                        <td class="row__item">1 200</td>
+                                        <td class="row__item">200</td>
+                                        <td class="row__item">4000</td>
+                                        <td class="row__item">1 200 000</td>
+                                        <td class="row__item fourth">
+                                            <svg class="table-svg green">
+                                                <use xlink:href="table.svg#perspective"></use>
+                                            </svg>
+                                            <svg class="table-svg green">
+                                                <use xlink:href="table.svg#perspective"></use>
+                                            </svg>
+                                            <svg class="table-svg green">
+                                                <use xlink:href="table.svg#perspective"></use>
+                                            </svg>
+                                            <svg class="table-svg green">
+                                                <use xlink:href="table.svg#perspective"></use>
+                                            </svg>
+                                            <svg class="table-svg">
+                                                <use xlink:href="table.svg#perspective"></use>
+                                            </svg>
+                                        </td>
+                                        <td class="row__item">95,7</td>
+                                        <td class="row__item">25</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="articles__pagination">
+                        <a class="pagination__item arrow" href="#">
+                            <svg class="pagination__arrow left" xmlns="http://www.w3.org/2000/svg" width="20"
+                                height="20" viewBox="0 0 20 20" fill="none">
+                                <path
+                                    d="M12.7422 3.17188C12.6267 3.12685 12.5009 3.11542 12.3792 3.13893C12.2576 3.16243 12.145 3.2199 12.0547 3.30469L5.80466 9.55469C5.6873 9.67318 5.62146 9.83322 5.62146 10C5.62146 10.1668 5.6873 10.3268 5.80466 10.4453L12.0547 16.6953C12.1746 16.81 12.334 16.8743 12.5 16.875C12.5829 16.8746 12.6651 16.8587 12.7422 16.8281C12.8559 16.7803 12.953 16.6999 13.0211 16.597C13.0892 16.4941 13.1254 16.3734 13.125 16.25V3.75C13.1254 3.62661 13.0892 3.50587 13.0211 3.40298C12.953 3.3001 12.8559 3.21969 12.7422 3.17188Z" />
+                            </svg>
+                        </a>
+                        <a class="pagination__item" href="#">
+                            1
+                        </a>
+                        <a class="pagination__item" href="#">
+                            2
+                        </a>
+                        <a class="pagination__item" href="#">
+                            3
+                        </a>
+                        <a class="pagination__item" href="#">
+                            4
+                        </a>
+                        <a class="pagination__item" href="#">
+                            5
+                        </a>
+                        <a class="pagination__item" href="#">
+                            ...
+                        </a>
+                        <a class="pagination__item" href="#">
+                            30
+                        </a>
+                        <a class="pagination__item arrow" href="#">
+                            <svg class="pagination__arrow right" xmlns="http://www.w3.org/2000/svg" width="20"
+                                height="20" viewBox="0 0 20 20" fill="none">
+                                <path
+                                    d="M12.7422 3.17188C12.6267 3.12685 12.5009 3.11542 12.3792 3.13893C12.2576 3.16243 12.145 3.2199 12.0547 3.30469L5.80466 9.55469C5.6873 9.67318 5.62146 9.83322 5.62146 10C5.62146 10.1668 5.6873 10.3268 5.80466 10.4453L12.0547 16.6953C12.1746 16.81 12.334 16.8743 12.5 16.875C12.5829 16.8746 12.6651 16.8587 12.7422 16.8281C12.8559 16.7803 12.953 16.6999 13.0211 16.597C13.0892 16.4941 13.1254 16.3734 13.125 16.25V3.75C13.1254 3.62661 13.0892 3.50587 13.0211 3.40298C12.953 3.3001 12.8559 3.21969 12.7422 3.17188Z" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="products__title brands-title">
+                        <div class="title__text">Бренды</div>
+                        <div class="title__results">(найдено 7011 результатов)</div>
+                    </div>
+                    <div class="products__filters category">
+                        <div class="filters__search">
+                            <div class="search__input">
+                                <img src="assets/imgs/search.svg" alt="Поиск" />
+                                <input class="filters__input" type="text" placeholder="Поиск" />
+                            </div>
+                            <div class="search-mob">
+                                <a href="#!" class="search__results">
+                                    <p>Выгрузить результаты</p>
+                                    <img src="assets/imgs/search-results.svg" alt="Скачать результаты" />
+                                </a>
+                                <a href="#!" class="mob-filters">
+                                    <img src="assets/imgs/filters-open.svg" alt="" class="search__results-img-mob">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="sellers__category">
+                            <div class="sellers__filters">
+                                <p>Фильтры</p>
+                                <img src="assets/imgs/filters-open.svg" alt="">
+                            </div>
+                            <div class="dropdown__block">
+                                <p>Сортировать:</p>
+                                <span>
+                                    <p class="dropdown__title">Дата добавления</p>
+                                    <img src="assets/imgs/faq-arrow.svg" alt="">
+                                    <ul class="drop-menu" id="dropmenu">
+                                        <li class="drop-item" data-value="Цвет 1">Дата д обавления</li>
+                                        <li class="drop-item" data-value="Цвет 2">Дата до авления</li>
+                                        <li class="drop-item" data-value="Цвет 3">Дата добавл ения</li>
+                                        <li class="drop-item" data-value="Цвет 4">Дата добавле ния</li>
+                                    </ul>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="brands__graph">
+                        <div class="brands__chart">
+                            <canvas id="brandsChart"></canvas>
+                        </div>
+                        <div class="chart__labels">
+                            <div class="label__column">
+                                <div class="label__item">
+                                    <p>ZARINA</p>
+                                    <span>31 008 888₽ (6%)</span>
+                                </div>
+                                <div class="label__item">
+                                    <p>ZARINA</p>
+                                    <span>31 008 888₽ (6%)</span>
+                                </div>
+                                <div class="label__item">
+                                    <p>ZARINA</p>
+                                    <span>31 008 888₽ (6%)</span>
+                                </div>
+                                <div class="label__item">
+                                    <p>ZARINA</p>
+                                    <span>31 008 888₽ (6%)</span>
+                                </div>
+                            </div>
+                            <div class="label__column">
+                                <div class="label__item">
+                                    <p>ZARINA</p>
+                                    <span>31 008 888₽ (6%)</span>
+                                </div>
+                                <div class="label__item">
+                                    <p>ZARINA</p>
+                                    <span>31 008 888₽ (6%)</span>
+                                </div>
+                                <div class="label__item">
+                                    <p>ZARINA</p>
+                                    <span>31 008 888₽ (6%)</span>
+                                </div>
+                                <div class="label__item">
+                                    <p>ZARINA</p>
+                                    <span>31 008 888₽ (6%)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__table category-tbl">
+                        <div class="table__head">
+                            <table>
+                                <thead>
+                                    <th class="head__item">Бренд</th>
+                                    <th class="head__item">Товаров (шт)</th>
+                                    <th class="head__item">Рейтинг</th>
+                                    <th class="head__item">Средний чек</th>
+                                    <th class="head__item">Продажи (шт)</th>
+                                    <th class="head__item">Оборот</th>
+                                    <th class="head__item"></th>
+                                </thead>
+                            </table>
+                        </div>
+                        <div class="table__main">
+                            <table>
+                                <tbody>
+                                    <tr class="table__row">
+                                        <td class="row__item first">
+                                            <div class="row__item-inner">
+                                                <img src="assets/imgs/wb.png" alt="">
+                                                <div class="tabe__item-title">ZARINA</div>
+                                            </div>
+                                        </td>
+                                        <td class="row__item">186</td>
+                                        <td class="row__item">7</td>
+                                        <td class="row__item">4.8</td>
+                                        <td class="row__item">31 000</td>
+                                        <td class="row__item fourth">31 008 888 ₽</td>
+                                        <td class="row__item">
+                                            <svg class="svg none">
+                                                <use xlink:href="favorite.svg#favorite"></use>
+                                            </svg>
+                                        </td>
+                                    </tr>
+                                    <tr class="table__row">
+                                        <td class="row__item first">
+                                            <div class="row__item-inner">
+                                                <img src="assets/imgs/wb.png" alt="">
+                                                <div class="tabe__item-title">ZARINA</div>
+                                            </div>
+                                        </td>
+                                        <td class="row__item">186</td>
+                                        <td class="row__item">7</td>
+                                        <td class="row__item">4.8</td>
+                                        <td class="row__item">31 000</td>
+                                        <td class="row__item fourth">31 008 888 ₽</td>
+                                        <td class="row__item">
+                                            <svg class="svg none">
+                                                <use xlink:href="favorite.svg#favorite"></use>
+                                            </svg>
+                                        </td>
+                                    </tr>
+                                    <tr class="table__row">
+                                        <td class="row__item first">
+                                            <div class="row__item-inner">
+                                                <img src="assets/imgs/wb.png" alt="">
+                                                <div class="tabe__item-title">ZARINA</div>
+                                            </div>
+                                        </td>
+                                        <td class="row__item">186</td>
+                                        <td class="row__item">7</td>
+                                        <td class="row__item">4.8</td>
+                                        <td class="row__item">31 000</td>
+                                        <td class="row__item fourth">31 008 888 ₽</td>
+                                        <td class="row__item">
+                                            <svg class="svg none">
+                                                <use xlink:href="favorite.svg#favorite"></use>
+                                            </svg>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="articles__pagination">
+                        <a class="pagination__item arrow" href="#">
+                            <svg class="pagination__arrow left" xmlns="http://www.w3.org/2000/svg" width="20"
+                                height="20" viewBox="0 0 20 20" fill="none">
+                                <path
+                                    d="M12.7422 3.17188C12.6267 3.12685 12.5009 3.11542 12.3792 3.13893C12.2576 3.16243 12.145 3.2199 12.0547 3.30469L5.80466 9.55469C5.6873 9.67318 5.62146 9.83322 5.62146 10C5.62146 10.1668 5.6873 10.3268 5.80466 10.4453L12.0547 16.6953C12.1746 16.81 12.334 16.8743 12.5 16.875C12.5829 16.8746 12.6651 16.8587 12.7422 16.8281C12.8559 16.7803 12.953 16.6999 13.0211 16.597C13.0892 16.4941 13.1254 16.3734 13.125 16.25V3.75C13.1254 3.62661 13.0892 3.50587 13.0211 3.40298C12.953 3.3001 12.8559 3.21969 12.7422 3.17188Z" />
+                            </svg>
+                        </a>
+                        <a class="pagination__item" href="#">
+                            1
+                        </a>
+                        <a class="pagination__item" href="#">
+                            2
+                        </a>
+                        <a class="pagination__item" href="#">
+                            3
+                        </a>
+                        <a class="pagination__item" href="#">
+                            4
+                        </a>
+                        <a class="pagination__item" href="#">
+                            5
+                        </a>
+                        <a class="pagination__item" href="#">
+                            ...
+                        </a>
+                        <a class="pagination__item" href="#">
+                            30
+                        </a>
+                        <a class="pagination__item arrow" href="#">
+                            <svg class="pagination__arrow right" xmlns="http://www.w3.org/2000/svg" width="20"
+                                height="20" viewBox="0 0 20 20" fill="none">
+                                <path
+                                    d="M12.7422 3.17188C12.6267 3.12685 12.5009 3.11542 12.3792 3.13893C12.2576 3.16243 12.145 3.2199 12.0547 3.30469L5.80466 9.55469C5.6873 9.67318 5.62146 9.83322 5.62146 10C5.62146 10.1668 5.6873 10.3268 5.80466 10.4453L12.0547 16.6953C12.1746 16.81 12.334 16.8743 12.5 16.875C12.5829 16.8746 12.6651 16.8587 12.7422 16.8281C12.8559 16.7803 12.953 16.6999 13.0211 16.597C13.0892 16.4941 13.1254 16.3734 13.125 16.25V3.75C13.1254 3.62661 13.0892 3.50587 13.0211 3.40298C12.953 3.3001 12.8559 3.21969 12.7422 3.17188Z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="javascript/sellers-open.js"></script>
+
+</body>
+
+</html>

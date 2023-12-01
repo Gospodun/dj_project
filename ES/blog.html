@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-metrics</title>
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css?version=5.3">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+
+</head>
+
+<body>
+    <div class="wrapper blog">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <a href="index.html">
+                        <img src="assets/imgs/Header-Logo.svg" alt="Логотип" class="header__logo">
+                    </a>
+                    <nav class="header__menu">
+                        <ul class="menu-list">
+                            <a class="login-link burger" href="authorisation.html">Войти</a>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">О продукте</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">Тарифы</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">Отзывы</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="blog.html" class="menu-link">Блог</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">FAQ</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="contacts.html" class="menu-link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header__buttons">
+                        <div class="button-login">
+                            <a class="login-link" href="authorisation.html">Войти</a>
+                        </div>
+                        <a href="registration.html" class="button-reg">
+                            <p>Регистрация</p>
+                        </a>
+                        <div class="header__burger">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="breadcrumbs">
+            <div class="container">
+                <div class="breadcrumbs__inner">
+                    <h1 class="breadcrumbs__title">Блог</h1>
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="index.html">
+                                <p>Главная</p>
+                            </a>
+                        </li>
+                        <img src="assets/imgs/breadcrumb-stick.svg" alt="">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="blog.html">
+                                <p>Блог</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <main class="main__blog">
+            <div class="container">
+                <div class="blog__inner">
+                    <div class="blog__filters">
+                        <div class="filters__category">
+                            <h2 class="category__title">Категории</h2>
+                            <ul class="category__list">
+                                <li class="category__item">
+                                    <p class="item__name">Название 1 (160)</p>
+                                </li>
+                                <li class="category__item">
+                                    <p class="item__name">Название 2 (50)</p>
+                                </li>
+                                <li class="category__item">
+                                    <p class="item__name">Название 3 (10)</p>
+                                </li>
+                                <li class="category__item">
+                                    <p class="item__name">Название 4 (160)</p>
+                                </li>
+                                <li class="category__item">
+                                    <p class="item__name">Название 5 (160)</p>
+                                </li>
+                                <li class="category__item">
+                                    <p class="item__name">Название 6 (160)</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="filters__category">
+                            <h2 class="category__title">Время прочтения</h2>
+                            <ul class="category__list">
+                                <li class="category__item">
+                                    <p class="item__name">Менее 5 минут (160)</p>
+                                </li>
+                                <li class="category__item">
+                                    <p class="item__name">Более 5 минут (50)</p>
+                                </li>
+                                <li class="category__item">
+                                    <p class="item__name">Более 10 минут (10)</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="filters__category">
+                            <h2 class="category__title">Автор статьи</h2>
+                            <ul class="category__list">
+                                <li class="category__item">
+                                    <p class="item__name">E-metrics</p>
+                                </li>
+                                <li class="category__item">
+                                    <p class="item__name">Другие авторы</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="filters__reset">
+                            <a href="#">
+                                <img src="assets/imgs/reset-filter.svg" alt="Сброс">
+                                <p>Сбросить фильтры</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="blog__articles">
+                        <div class="articles__header">
+                            <div class="article__filters">
+                                <p>Фильтры</p>
+                                <img src="assets/imgs/filters-open.svg" alt="">
+                            </div>
+                            <div class="articles__title">
+                                <h3>Список статей</h3>
+                                <p>(найдено 160 результатов)</p>
+                            </div>
+                            <div class="dropdown__block">
+                                <p>Сортировать:</p>
+                                <span>
+                                    <p class="dropdown__title">Дата добавления</p>
+                                    <img src="assets/imgs/faq-arrow.svg" alt="">
+                                    <ul class="drop-menu" id="dropmenu">
+                                        <li class="drop-item" data-value="Цвет 1">Неделя</li>
+                                        <li class="drop-item" data-value="Цвет 2">2 недели</li>
+                                        <li class="drop-item" data-value="Цвет 3">Месяц</li>
+                                        <li class="drop-item" data-value="Цвет 4">год</li>
+                                    </ul>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="articles__items">
+                            <div class="articles__title mob">
+                                <h3>Список статей</h3>
+                                <p>(найдено 160 результатов)</p>
+                            </div>
+
+                            <ul class="articles__list swiper2 mob swiper">
+                                <div class="swiper-wrapper">
+                                    <li class="articles__item swiper-slide">
+                                        <a href="#">
+                                            <div class="article__preview">
+                                                <img src="assets/imgs/article-preview.png" alt="Превью">
+                                            </div>
+                                            <div class="article__body">
+                                                <div class="article__header">
+                                                    <div class="article__overhead">
+                                                        <p>Название 1</p>
+                                                        <div class="statistic__item">
+                                                            <img src="assets/imgs/article-rate.svg" alt="Время">
+                                                            <p>4.8 (142)</p>
+                                                        </div>
+                                                    </div>
+                                                    <h5 class="article__title">Научитесь зарабатывать с 0, без крупных
+                                                        вложений
+                                                        и
+                                                        помощи
+                                                        от инвесторов</h5>
+                                                </div>
+                                                <div class="article__statistic">
+                                                    <div class="statistic__item">
+                                                        <img src="assets/imgs/article-time.svg" alt="Время">
+                                                        <p>Менее 5 минут</p>
+                                                    </div>
+                                                    <div class="statistic__item">
+                                                        <img src="assets/imgs/article-author.svg" alt="Время">
+                                                        <p>E-metrics</p>
+                                                    </div>
+                                                    <div class="statistic__item">
+                                                        <img src="assets/imgs/article-rate.svg" alt="Время">
+                                                        <p>4.8 (142)</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="articles__item swiper-slide">
+                                        <a href="#">
+                                            <div class="article__preview">
+                                                <img src="assets/imgs/article-preview.png" alt="Превью">
+                                            </div>
+                                            <div class="article__body">
+                                                <div class="article__header">
+                                                    <div class="article__overhead">
+                                                        <p>Название 1</p>
+                                                        <div class="statistic__item">
+                                                            <img src="assets/imgs/article-rate.svg" alt="Время">
+                                                            <p>4.8 (142)</p>
+                                                        </div>
+                                                    </div>
+                                                    <h5 class="article__title">Научитесь зарабатывать с 0, без крупных
+                                                        вложений
+                                                        и
+                                                        помощи
+                                                        от инвесторов</h5>
+                                                </div>
+                                                <div class="article__statistic">
+                                                    <div class="statistic__item">
+                                                        <img src="assets/imgs/article-time.svg" alt="Время">
+                                                        <p>Менее 5 минут</p>
+                                                    </div>
+                                                    <div class="statistic__item">
+                                                        <img src="assets/imgs/article-author.svg" alt="Время">
+                                                        <p>E-metrics</p>
+                                                    </div>
+                                                    <div class="statistic__item">
+                                                        <img src="assets/imgs/article-rate.svg" alt="Время">
+                                                        <p>4.8 (142)</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="articles__item swiper-slide ">
+                                        <a href="#">
+                                            <div class="article__preview">
+                                                <img src="assets/imgs/article-preview.png" alt="Превью">
+                                            </div>
+                                            <div class="article__body">
+                                                <div class="article__header">
+                                                    <div class="article__overhead">
+                                                        <p>Название 1</p>
+                                                        <div class="statistic__item">
+                                                            <img src="assets/imgs/article-rate.svg" alt="Время">
+                                                            <p>4.8 (142)</p>
+                                                        </div>
+                                                    </div>
+                                                    <h5 class="article__title">Научитесь зарабатывать с 0, без крупных
+                                                        вложений
+                                                        и
+                                                        помощи
+                                                        от инвесторов</h5>
+                                                </div>
+                                                <div class="article__statistic">
+                                                    <div class="statistic__item">
+                                                        <img src="assets/imgs/article-time.svg" alt="Время">
+                                                        <p>Менее 5 минут</p>
+                                                    </div>
+                                                    <div class="statistic__item">
+                                                        <img src="assets/imgs/article-author.svg" alt="Время">
+                                                        <p>E-metrics</p>
+                                                    </div>
+                                                    <div class="statistic__item">
+                                                        <img src="assets/imgs/article-rate.svg" alt="Время">
+                                                        <p>4.8 (142)</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="articles__item swiper-slide ">
+                                        <a href="#">
+                                            <div class="article__preview">
+                                                <img src="assets/imgs/article-preview.png" alt="Превью">
+                                            </div>
+                                            <div class="article__body">
+                                                <div class="article__header">
+                                                    <div class="article__overhead">
+                                                        <p>Название 1</p>
+                                                        <div class="statistic__item">
+                                                            <img src="assets/imgs/article-rate.svg" alt="Время">
+                                                            <p>4.8 (142)</p>
+                                                        </div>
+                                                    </div>
+                                                    <h5 class="article__title">Научитесь зарабатывать с 0, без крупных
+                                                        вложений
+                                                        и
+                                                        помощи
+                                                        от инвесторов</h5>
+                                                </div>
+                                                <div class="article__statistic">
+                                                    <div class="statistic__item">
+                                                        <img src="assets/imgs/article-time.svg" alt="Время">
+                                                        <p>Менее 5 минут</p>
+                                                    </div>
+                                                    <div class="statistic__item">
+                                                        <img src="assets/imgs/article-author.svg" alt="Время">
+                                                        <p>E-metrics</p>
+                                                    </div>
+                                                    <div class="statistic__item">
+                                                        <img src="assets/imgs/article-rate.svg" alt="Время">
+                                                        <p>4.8 (142)</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="articles__item swiper-slide ">
+                                        <a href="#">
+                                            <div class="article__preview">
+                                                <img src="assets/imgs/article-preview.png" alt="Превью">
+                                            </div>
+                                            <div class="article__body">
+                                                <div class="article__header">
+                                                    <div class="article__overhead">
+                                                        <p>Название 1</p>
+                                                        <div class="statistic__item">
+                                                            <img src="assets/imgs/article-rate.svg" alt="Время">
+                                                            <p>4.8 (142)</p>
+                                                        </div>
+                                                    </div>
+                                                    <h5 class="article__title">Научитесь зарабатывать с 0, без крупных
+                                                        вложений
+                                                        и
+                                                        помощи
+                                                        от инвесторов</h5>
+                                                </div>
+                                                <div class="article__statistic">
+                                                    <div class="statistic__item">
+                                                        <img src="assets/imgs/article-time.svg" alt="Время">
+                                                        <p>Менее 5 минут</p>
+                                                    </div>
+                                                    <div class="statistic__item">
+                                                        <img src="assets/imgs/article-author.svg" alt="Время">
+                                                        <p>E-metrics</p>
+                                                    </div>
+                                                    <div class="statistic__item">
+                                                        <img src="assets/imgs/article-rate.svg" alt="Время">
+                                                        <p>4.8 (142)</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="articles__item swiper-slide ">
+                                        <a href="#">
+                                            <div class="article__preview">
+                                                <img src="assets/imgs/article-preview.png" alt="Превью">
+                                            </div>
+                                            <div class="article__body">
+                                                <div class="article__header">
+                                                    <div class="article__overhead">
+                                                        <p>Название 1</p>
+                                                        <div class="statistic__item">
+                                                            <img src="assets/imgs/article-rate.svg" alt="Время">
+                                                            <p>4.8 (142)</p>
+                                                        </div>
+                                                    </div>
+                                                    <h5 class="article__title">Научитесь зарабатывать с 0, без крупных
+                                                        вложений
+                                                        и
+                                                        помощи
+                                                        от инвесторов</h5>
+                                                </div>
+                                                <div class="article__statistic">
+                                                    <div class="statistic__item">
+                                                        <img src="assets/imgs/article-time.svg" alt="Время">
+                                                        <p>Менее 5 минут</p>
+                                                    </div>
+                                                    <div class="statistic__item">
+                                                        <img src="assets/imgs/article-author.svg" alt="Время">
+                                                        <p>E-metrics</p>
+                                                    </div>
+                                                    <div class="statistic__item">
+                                                        <img src="assets/imgs/article-rate.svg" alt="Время">
+                                                        <p>4.8 (142)</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="articles__item swiper-slide ">
+                                        <a href="#">
+                                            <div class="article__preview">
+                                                <img src="assets/imgs/article-preview.png" alt="Превью">
+                                            </div>
+                                            <div class="article__body">
+                                                <div class="article__header">
+                                                    <div class="article__overhead">
+                                                        <p>Название 1</p>
+                                                        <div class="statistic__item">
+                                                            <img src="assets/imgs/article-rate.svg" alt="Время">
+                                                            <p>4.8 (142)</p>
+                                                        </div>
+                                                    </div>
+                                                    <h5 class="article__title">Научитесь зарабатывать с 0, без крупных
+                                                        вложений
+                                                        и
+                                                        помощи
+                                                        от инвесторов</h5>
+                                                </div>
+                                                <div class="article__statistic">
+                                                    <div class="statistic__item">
+                                                        <img src="assets/imgs/article-time.svg" alt="Время">
+                                                        <p>Менее 5 минут</p>
+                                                    </div>
+                                                    <div class="statistic__item">
+                                                        <img src="assets/imgs/article-author.svg" alt="Время">
+                                                        <p>E-metrics</p>
+                                                    </div>
+                                                    <div class="statistic__item">
+                                                        <img src="assets/imgs/article-rate.svg" alt="Время">
+                                                        <p>4.8 (142)</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="articles__item swiper-slide ">
+                                        <a href="#">
+                                            <div class="article__preview">
+                                                <img src="assets/imgs/article-preview.png" alt="Превью">
+                                            </div>
+                                            <div class="article__body">
+                                                <div class="article__header">
+                                                    <div class="article__overhead">
+                                                        <p>Название 1</p>
+                                                        <div class="statistic__item">
+                                                            <img src="assets/imgs/article-rate.svg" alt="Время">
+                                                            <p>4.8 (142)</p>
+                                                        </div>
+                                                    </div>
+                                                    <h5 class="article__title">Научитесь зарабатывать с 0, без крупных
+                                                        вложений
+                                                        и
+                                                        помощи
+                                                        от инвесторов</h5>
+                                                </div>
+                                                <div class="article__statistic">
+                                                    <div class="statistic__item">
+                                                        <img src="assets/imgs/article-time.svg" alt="Время">
+                                                        <p>Менее 5 минут</p>
+                                                    </div>
+                                                    <div class="statistic__item">
+                                                        <img src="assets/imgs/article-author.svg" alt="Время">
+                                                        <p>E-metrics</p>
+                                                    </div>
+                                                    <div class="statistic__item">
+                                                        <img src="assets/imgs/article-rate.svg" alt="Время">
+                                                        <p>4.8 (142)</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="articles__item swiper-slide ">
+                                        <a href="#">
+                                            <div class="article__preview">
+                                                <img src="assets/imgs/article-preview.png" alt="Превью">
+                                            </div>
+                                            <div class="article__body">
+                                                <div class="article__header">
+                                                    <div class="article__overhead">
+                                                        <p>Название 1</p>
+                                                        <div class="statistic__item">
+                                                            <img src="assets/imgs/article-rate.svg" alt="Время">
+                                                            <p>4.8 (142)</p>
+                                                        </div>
+                                                    </div>
+                                                    <h5 class="article__title">Научитесь зарабатывать с 0, без крупных
+                                                        вложений
+                                                        и
+                                                        помощи
+                                                        от инвесторов</h5>
+                                                </div>
+                                                <div class="article__statistic">
+                                                    <div class="statistic__item">
+                                                        <img src="assets/imgs/article-time.svg" alt="Время">
+                                                        <p>Менее 5 минут</p>
+                                                    </div>
+                                                    <div class="statistic__item">
+                                                        <img src="assets/imgs/article-author.svg" alt="Время">
+                                                        <p>E-metrics</p>
+                                                    </div>
+                                                    <div class="statistic__item">
+                                                        <img src="assets/imgs/article-rate.svg" alt="Время">
+                                                        <p>4.8 (142)</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </div>
+                            </ul>
+
+                            <ul class="articles__list">
+                                <li class="articles__item">
+                                    <a href="#">
+                                        <div class="article__preview">
+                                            <img src="assets/imgs/article-preview.png" alt="Превью">
+                                        </div>
+                                        <div class="article__body">
+                                            <div class="article__header">
+                                                <div class="article__overhead">
+                                                    <p>Название 1</p>
+                                                    <div class="statistic__item">
+                                                        <img src="assets/imgs/article-rate.svg" alt="Время">
+                                                        <p>4.8 (142)</p>
+                                                    </div>
+                                                </div>
+                                                <h5 class="article__title">Научитесь зарабатывать с 0, без крупных
+                                                    вложений
+                                                    и
+                                                    помощи
+                                                    от инвесторов</h5>
+                                            </div>
+                                            <div class="article__statistic">
+                                                <div class="statistic__item">
+                                                    <img src="assets/imgs/article-time.svg" alt="Время">
+                                                    <p>Менее 5 минут</p>
+                                                </div>
+                                                <div class="statistic__item">
+                                                    <img src="assets/imgs/article-author.svg" alt="Время">
+                                                    <p>E-metrics</p>
+                                                </div>
+                                                <div class="statistic__item">
+                                                    <img src="assets/imgs/article-rate.svg" alt="Время">
+                                                    <p>4.8 (142)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="articles__item ">
+                                    <a href="#">
+                                        <div class="article__preview">
+                                            <img src="assets/imgs/article-preview.png" alt="Превью">
+                                        </div>
+                                        <div class="article__body">
+                                            <div class="article__header">
+                                                <div class="article__overhead">
+                                                    <p>Название 1</p>
+                                                    <div class="statistic__item">
+                                                        <img src="assets/imgs/article-rate.svg" alt="Время">
+                                                        <p>4.8 (142)</p>
+                                                    </div>
+                                                </div>
+                                                <h5 class="article__title">Научитесь зарабатывать с 0, без крупных
+                                                    вложений
+                                                    и
+                                                    помощи
+                                                    от инвесторов</h5>
+                                            </div>
+                                            <div class="article__statistic">
+                                                <div class="statistic__item">
+                                                    <img src="assets/imgs/article-time.svg" alt="Время">
+                                                    <p>Менее 5 минут</p>
+                                                </div>
+                                                <div class="statistic__item">
+                                                    <img src="assets/imgs/article-author.svg" alt="Время">
+                                                    <p>E-metrics</p>
+                                                </div>
+                                                <div class="statistic__item">
+                                                    <img src="assets/imgs/article-rate.svg" alt="Время">
+                                                    <p>4.8 (142)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="articles__item ">
+                                    <a href="#">
+                                        <div class="article__preview">
+                                            <img src="assets/imgs/article-preview.png" alt="Превью">
+                                        </div>
+                                        <div class="article__body">
+                                            <div class="article__header">
+                                                <div class="article__overhead">
+                                                    <p>Название 1</p>
+                                                    <div class="statistic__item">
+                                                        <img src="assets/imgs/article-rate.svg" alt="Время">
+                                                        <p>4.8 (142)</p>
+                                                    </div>
+                                                </div>
+                                                <h5 class="article__title">Научитесь зарабатывать с 0, без крупных
+                                                    вложений
+                                                    и
+                                                    помощи
+                                                    от инвесторов</h5>
+                                            </div>
+                                            <div class="article__statistic">
+                                                <div class="statistic__item">
+                                                    <img src="assets/imgs/article-time.svg" alt="Время">
+                                                    <p>Менее 5 минут</p>
+                                                </div>
+                                                <div class="statistic__item">
+                                                    <img src="assets/imgs/article-author.svg" alt="Время">
+                                                    <p>E-metrics</p>
+                                                </div>
+                                                <div class="statistic__item">
+                                                    <img src="assets/imgs/article-rate.svg" alt="Время">
+                                                    <p>4.8 (142)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="articles__item ">
+                                    <a href="#">
+                                        <div class="article__preview">
+                                            <img src="assets/imgs/article-preview.png" alt="Превью">
+                                        </div>
+                                        <div class="article__body">
+                                            <div class="article__header">
+                                                <div class="article__overhead">
+                                                    <p>Название 1</p>
+                                                    <div class="statistic__item">
+                                                        <img src="assets/imgs/article-rate.svg" alt="Время">
+                                                        <p>4.8 (142)</p>
+                                                    </div>
+                                                </div>
+                                                <h5 class="article__title">Научитесь зарабатывать с 0, без крупных
+                                                    вложений
+                                                    и
+                                                    помощи
+                                                    от инвесторов</h5>
+                                            </div>
+                                            <div class="article__statistic">
+                                                <div class="statistic__item">
+                                                    <img src="assets/imgs/article-time.svg" alt="Время">
+                                                    <p>Менее 5 минут</p>
+                                                </div>
+                                                <div class="statistic__item">
+                                                    <img src="assets/imgs/article-author.svg" alt="Время">
+                                                    <p>E-metrics</p>
+                                                </div>
+                                                <div class="statistic__item">
+                                                    <img src="assets/imgs/article-rate.svg" alt="Время">
+                                                    <p>4.8 (142)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="articles__item ">
+                                    <a href="#">
+                                        <div class="article__preview">
+                                            <img src="assets/imgs/article-preview.png" alt="Превью">
+                                        </div>
+                                        <div class="article__body">
+                                            <div class="article__header">
+                                                <div class="article__overhead">
+                                                    <p>Название 1</p>
+                                                    <div class="statistic__item">
+                                                        <img src="assets/imgs/article-rate.svg" alt="Время">
+                                                        <p>4.8 (142)</p>
+                                                    </div>
+                                                </div>
+                                                <h5 class="article__title">Научитесь зарабатывать с 0, без крупных
+                                                    вложений
+                                                    и
+                                                    помощи
+                                                    от инвесторов</h5>
+                                            </div>
+                                            <div class="article__statistic">
+                                                <div class="statistic__item">
+                                                    <img src="assets/imgs/article-time.svg" alt="Время">
+                                                    <p>Менее 5 минут</p>
+                                                </div>
+                                                <div class="statistic__item">
+                                                    <img src="assets/imgs/article-author.svg" alt="Время">
+                                                    <p>E-metrics</p>
+                                                </div>
+                                                <div class="statistic__item">
+                                                    <img src="assets/imgs/article-rate.svg" alt="Время">
+                                                    <p>4.8 (142)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="articles__item ">
+                                    <a href="#">
+                                        <div class="article__preview">
+                                            <img src="assets/imgs/article-preview.png" alt="Превью">
+                                        </div>
+                                        <div class="article__body">
+                                            <div class="article__header">
+                                                <div class="article__overhead">
+                                                    <p>Название 1</p>
+                                                    <div class="statistic__item">
+                                                        <img src="assets/imgs/article-rate.svg" alt="Время">
+                                                        <p>4.8 (142)</p>
+                                                    </div>
+                                                </div>
+                                                <h5 class="article__title">Научитесь зарабатывать с 0, без крупных
+                                                    вложений
+                                                    и
+                                                    помощи
+                                                    от инвесторов</h5>
+                                            </div>
+                                            <div class="article__statistic">
+                                                <div class="statistic__item">
+                                                    <img src="assets/imgs/article-time.svg" alt="Время">
+                                                    <p>Менее 5 минут</p>
+                                                </div>
+                                                <div class="statistic__item">
+                                                    <img src="assets/imgs/article-author.svg" alt="Время">
+                                                    <p>E-metrics</p>
+                                                </div>
+                                                <div class="statistic__item">
+                                                    <img src="assets/imgs/article-rate.svg" alt="Время">
+                                                    <p>4.8 (142)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="articles__item ">
+                                    <a href="#">
+                                        <div class="article__preview">
+                                            <img src="assets/imgs/article-preview.png" alt="Превью">
+                                        </div>
+                                        <div class="article__body">
+                                            <div class="article__header">
+                                                <div class="article__overhead">
+                                                    <p>Название 1</p>
+                                                    <div class="statistic__item">
+                                                        <img src="assets/imgs/article-rate.svg" alt="Время">
+                                                        <p>4.8 (142)</p>
+                                                    </div>
+                                                </div>
+                                                <h5 class="article__title">Научитесь зарабатывать с 0, без крупных
+                                                    вложений
+                                                    и
+                                                    помощи
+                                                    от инвесторов</h5>
+                                            </div>
+                                            <div class="article__statistic">
+                                                <div class="statistic__item">
+                                                    <img src="assets/imgs/article-time.svg" alt="Время">
+                                                    <p>Менее 5 минут</p>
+                                                </div>
+                                                <div class="statistic__item">
+                                                    <img src="assets/imgs/article-author.svg" alt="Время">
+                                                    <p>E-metrics</p>
+                                                </div>
+                                                <div class="statistic__item">
+                                                    <img src="assets/imgs/article-rate.svg" alt="Время">
+                                                    <p>4.8 (142)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="articles__item ">
+                                    <a href="#">
+                                        <div class="article__preview">
+                                            <img src="assets/imgs/article-preview.png" alt="Превью">
+                                        </div>
+                                        <div class="article__body">
+                                            <div class="article__header">
+                                                <div class="article__overhead">
+                                                    <p>Название 1</p>
+                                                    <div class="statistic__item">
+                                                        <img src="assets/imgs/article-rate.svg" alt="Время">
+                                                        <p>4.8 (142)</p>
+                                                    </div>
+                                                </div>
+                                                <h5 class="article__title">Научитесь зарабатывать с 0, без крупных
+                                                    вложений
+                                                    и
+                                                    помощи
+                                                    от инвесторов</h5>
+                                            </div>
+                                            <div class="article__statistic">
+                                                <div class="statistic__item">
+                                                    <img src="assets/imgs/article-time.svg" alt="Время">
+                                                    <p>Менее 5 минут</p>
+                                                </div>
+                                                <div class="statistic__item">
+                                                    <img src="assets/imgs/article-author.svg" alt="Время">
+                                                    <p>E-metrics</p>
+                                                </div>
+                                                <div class="statistic__item">
+                                                    <img src="assets/imgs/article-rate.svg" alt="Время">
+                                                    <p>4.8 (142)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="articles__item ">
+                                    <a href="#">
+                                        <div class="article__preview">
+                                            <img src="assets/imgs/article-preview.png" alt="Превью">
+                                        </div>
+                                        <div class="article__body">
+                                            <div class="article__header">
+                                                <div class="article__overhead">
+                                                    <p>Название 1</p>
+                                                    <div class="statistic__item">
+                                                        <img src="assets/imgs/article-rate.svg" alt="Время">
+                                                        <p>4.8 (142)</p>
+                                                    </div>
+                                                </div>
+                                                <h5 class="article__title">Научитесь зарабатывать с 0, без крупных
+                                                    вложений
+                                                    и
+                                                    помощи
+                                                    от инвесторов</h5>
+                                            </div>
+                                            <div class="article__statistic">
+                                                <div class="statistic__item">
+                                                    <img src="assets/imgs/article-time.svg" alt="Время">
+                                                    <p>Менее 5 минут</p>
+                                                </div>
+                                                <div class="statistic__item">
+                                                    <img src="assets/imgs/article-author.svg" alt="Время">
+                                                    <p>E-metrics</p>
+                                                </div>
+                                                <div class="statistic__item">
+                                                    <img src="assets/imgs/article-rate.svg" alt="Время">
+                                                    <p>4.8 (142)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div class="articles__pagination">
+                            <a class="pagination__item arrow" href="#">
+                                <svg class="pagination__arrow left" xmlns="http://www.w3.org/2000/svg" width="20"
+                                    height="20" viewBox="0 0 20 20" fill="none">
+                                    <path
+                                        d="M12.7422 3.17188C12.6267 3.12685 12.5009 3.11542 12.3792 3.13893C12.2576 3.16243 12.145 3.2199 12.0547 3.30469L5.80466 9.55469C5.6873 9.67318 5.62146 9.83322 5.62146 10C5.62146 10.1668 5.6873 10.3268 5.80466 10.4453L12.0547 16.6953C12.1746 16.81 12.334 16.8743 12.5 16.875C12.5829 16.8746 12.6651 16.8587 12.7422 16.8281C12.8559 16.7803 12.953 16.6999 13.0211 16.597C13.0892 16.4941 13.1254 16.3734 13.125 16.25V3.75C13.1254 3.62661 13.0892 3.50587 13.0211 3.40298C12.953 3.3001 12.8559 3.21969 12.7422 3.17188Z" />
+                                </svg>
+                            </a>
+                            <a class="pagination__item" href="#">
+                                1
+                            </a>
+                            <a class="pagination__item" href="#">
+                                2
+                            </a>
+                            <a class="pagination__item" href="#">
+                                3
+                            </a>
+                            <a class="pagination__item" href="#">
+                                4
+                            </a>
+                            <a class="pagination__item" href="#">
+                                5
+                            </a>
+                            <a class="pagination__item" href="#">
+                                ...
+                            </a>
+                            <a class="pagination__item" href="#">
+                                30
+                            </a>
+                            <a class="pagination__item arrow" href="#">
+                                <svg class="pagination__arrow right" xmlns="http://www.w3.org/2000/svg" width="20"
+                                    height="20" viewBox="0 0 20 20" fill="none">
+                                    <path
+                                        d="M12.7422 3.17188C12.6267 3.12685 12.5009 3.11542 12.3792 3.13893C12.2576 3.16243 12.145 3.2199 12.0547 3.30469L5.80466 9.55469C5.6873 9.67318 5.62146 9.83322 5.62146 10C5.62146 10.1668 5.6873 10.3268 5.80466 10.4453L12.0547 16.6953C12.1746 16.81 12.334 16.8743 12.5 16.875C12.5829 16.8746 12.6651 16.8587 12.7422 16.8281C12.8559 16.7803 12.953 16.6999 13.0211 16.597C13.0892 16.4941 13.1254 16.3734 13.125 16.25V3.75C13.1254 3.62661 13.0892 3.50587 13.0211 3.40298C12.953 3.3001 12.8559 3.21969 12.7422 3.17188Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </main>
+    <footer class="footer intro">
+        <div class="container">
+            <div class="section__header">
+                <h1 class="section__title footer-title">Узнайте, под какое направление подходит ваш проект</h1>
+                <p class="section__subtitle footer-subtitle">Для малых и средних предприятий и предпринимателей</p>
+            </div>
+            <div class="footer__inner">
+                <div class="footer__buttons">
+                    <a href="#" class="footer__btn try-btn">
+                        <p>Попробовать бесплатно</p>
+                    </a>
+                    <a href="#" class="footer__btn connect-btn">
+                        <p>Связаться с нами</p>
+                    </a>
+                </div>
+                <div class="footer__info">
+                    <div class="footer__leftside">
+                        <a href="index.html">
+                            <img src="assets/imgs/Header-Logo.svg" alt="Логотип" class="footer__logo">
+                        </a>
+                        <p class="footer__text">E-metrics is a global online learning platform that offers anyone,
+                            anywhere access to online courses</p>
+                        <a href="#" class="footer__politic">
+                            <p>Политика конфиденциальности</p>
+                        </a>
+                    </div>
+                    <div class="footer__rightside">
+                        <nav class="footer__nav">
+                            <ul class="footer-menu">
+                                <li class="footer-menu-item">
+                                    <a class="footer-link" href="#">О продукте</a>
+                                </li>
+                                <li class="footer-menu-item">
+                                    <a class="footer-link" href="#">Тарифы</a>
+                                </li>
+                                <li class="footer-menu-item">
+                                    <a class="footer-link" href="#">Отзывы</a>
+                                </li>
+                                <li class="footer-menu-item">
+                                    <a class="footer-link" href="blog.html">Блог</a>
+                                </li>
+                                <li class="footer-menu-item">
+                                    <a class="footer-link" href="#">FAQ</a>
+                                </li>
+                                <li class="footer-menu-item">
+                                    <a class="footer-link" href="contacts.html">Контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="footer__contacts">
+                            <div class="contacts__item">
+                                <p>Телефон:</p>
+                                <a href="tel:+79999999999">+7 (999) 999-99-99</a>
+                            </div>
+                            <div class="contacts__item">
+                                <p>E-mail:</p>
+                                <a href="mailto:emailpochta@gmail.com">emailpochta@gmail.com</a>
+                            </div>
+                            <div class="contacts__address">
+                                <p>г. Москва, ул. Пушкина 25, 33</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__socials">
+                    <p class="footer_copypaste">©2023 e-metrics. All rights reserved</p>
+                    <div class="social__links">
+                        <a href="#">
+                            <img src="assets/imgs/telegram.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="assets/imgs/telegram.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="assets/imgs/telegram.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="assets/imgs/telegram.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="javascript/slider.js"></script>
+    <script src="javascript/app.js"></script>
+    <script src="javascript/script.js"></script>
+</body>
+
+</html>

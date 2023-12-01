@@ -1,0 +1,241 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-metrics</title>
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'favicon/site.webmanifest' %}">
+    <link rel="mask-icon" href="{% static 'favicon/safari-pinned-tab.svg' %}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+<body>
+    <div class="wrapper contacts">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <a href="..">
+                        <img src="{% static 'assets/imgs/Header-Logo.svg' %}" alt="Логотип" class="header__logo">
+                    </a>
+                    <nav class="header__menu">
+                        <ul class="menu-list">
+                            <a class="login-link burger" href="../authorisation">Войти</a>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">О продукте</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">Тарифы</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">Отзывы</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="../blog" class="menu-link">Блог</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">FAQ</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="../contacts" class="menu-link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header__buttons">
+                        <div class="button-login">
+                            <a class="login-link" href="../authorisation">Войти</a>
+                        </div>
+                        <a href="../registration" class="button-reg">
+                            <p>Регистрация</p>
+                        </a>
+                        <div class="header__burger">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="breadcrumbs">
+            <div class="container">
+                <div class="breadcrumbs__inner">
+                    <h1 class="breadcrumbs__title">Контакты</h1>
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="..">
+                                <p>Главная</p>
+                            </a>
+                        </li>
+                        <img src="{% static 'assets/imgs/breadcrumb-stick.svg' %}" alt="">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="../contacts">
+                                <p>Контакты</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <main class="main">
+            <div class="container">
+                <div class="contacts__inner">
+                    <ul class="contacts__list">
+                        <li class="contacts__card">
+                            <h2 class="contacts__title">Время работы</h2>
+                            <p class="contacts__info">с 10:00 до 21:00<br>без выходных</p>
+                        </li>
+                        <li class="contacts__card">
+                            <h2 class="contacts__title">Адрес</h2>
+                            <p class="contacts__info">г. Москва,<br>ул. Пушкина 25, 33</p>
+                        </li>
+                        <li class="contacts__card">
+                            <h2 class="contacts__title">Телефон</h2>
+                            <p class="contacts__info">+7 (999) 999-99-99<br>(WA, Telegram)</p>
+                        </li>
+                        <li class="contacts__card">
+                            <h2 class="contacts__title">E-mail</h2>
+                            <p class="contacts__info">emailpochta@gmail.com</p>
+                        </li>
+                    </ul>
+                    <div class="company">
+                        <div class="company__intro">
+                            <h3 class="company__title">О нашей компании</h3>
+                            <p class="company__about">Есть над чем задуматься: непосредственные участники технического
+                                прогресса будут</p>
+                            <p class="info__paragraph mob"><span>E-metrics</span> - Ясность нашей позиции очевидна:
+                                новая
+                                модель организационной деятельности, в своём классическом представлении, допускает
+                                внедрение форм воздействия.</p>
+                            <img class="company__photo" src="{% static 'assets/imgs/company-img.png' %}" alt="О компании">
+                        </div>
+                        <div class="company__info">
+                            <p class="info__paragraph"><span>E-metrics</span> - Ясность нашей позиции очевидна: новая
+                                модель организационной деятельности, в своём классическом представлении, допускает
+                                внедрение форм воздействия.</p>
+                            <div class="why__us">
+                                <h4 class="why__title">Почему именно мы?</h4>
+                                <p class="why__paragraph">Есть над чем задуматься: непосредственные участники
+                                    технического
+                                    прогресса будут заблокированы в рамках своих собственных рациональных ограничений.
+                                    Ясность нашей позиции очевидна: новая модель организационной деятельности.</p>
+                            </div>
+                            <ul class="company__features">
+                                <li class="features__item">
+                                    <h5 class="feature__title">с 2016 г</h5>
+                                    <p class="feature__option">на рынке</p>
+                                </li>
+                                <li class="features__item">
+                                    <h5 class="feature__title">с 2016 г</h5>
+                                    <p class="feature__option">на рынке</p>
+                                </li>
+                                <li class="features__item">
+                                    <h5 class="feature__title">с 2016 г</h5>
+                                    <p class="feature__option">на рынке</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer intro">
+            <div class="container">
+                <div class="section__header">
+                    <h1 class="section__title footer-title">Узнайте, под какое направление подходит ваш проект</h1>
+                    <p class="section__subtitle footer-subtitle">Для малых и средних предприятий и предпринимателей</p>
+                </div>
+                <div class="footer__inner">
+                    <div class="footer__buttons">
+                        <a href="#" class="footer__btn try-btn">
+                            <p>Попробовать бесплатно</p>
+                        </a>
+                        <a href="#" class="footer__btn connect-btn">
+                            <p>Связаться с нами</p>
+                        </a>
+                    </div>
+                    <div class="footer__info">
+                        <div class="footer__leftside">
+                            <a href="..">
+                                <img src="{% static 'assets/imgs/Header-Logo.svg' %}" alt="Логотип" class="footer__logo">
+                            </a>
+                            <p class="footer__text">E-metrics is a global online learning platform that offers anyone,
+                                anywhere access to online courses</p>
+                            <a href="#" class="footer__politic">
+                                <p>Политика конфиденциальности</p>
+                            </a>
+                        </div>
+                        <div class="footer__rightside">
+                            <nav class="footer__nav">
+                                <ul class="footer-menu">
+                                    <li class="footer-menu-item">
+                                        <a class="footer-link" href="#">О продукте</a>
+                                    </li>
+                                    <li class="footer-menu-item">
+                                        <a class="footer-link" href="#">Тарифы</a>
+                                    </li>
+                                    <li class="footer-menu-item">
+                                        <a class="footer-link" href="#">Отзывы</a>
+                                    </li>
+                                    <li class="footer-menu-item">
+                                        <a class="footer-link" href="../blog">Блог</a>
+                                    </li>
+                                    <li class="footer-menu-item">
+                                        <a class="footer-link" href="#">FAQ</a>
+                                    </li>
+                                    <li class="footer-menu-item">
+                                        <a class="footer-link" href="../contacts">Контакты</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="footer__contacts">
+                                <div class="contacts__item">
+                                    <p>Телефон:</p>
+                                    <a href="tel:+79999999999">+7 (999) 999-99-99</a>
+                                </div>
+                                <div class="contacts__item">
+                                    <p>E-mail:</p>
+                                    <a href="mailto:emailpochta@gmail.com">emailpochta@gmail.com</a>
+                                </div>
+                                <div class="contacts__address">
+                                    <p>г. Москва, ул. Пушкина 25, 33</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__socials">
+                        <p class="footer_copypaste">©2023 e-metrics. All rights reserved</p>
+                        <div class="social__links">
+                            <a href="#">
+                                <img src="{% static 'assets/imgs/telegram.svg' %}" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="{% static 'assets/imgs/telegram.svg' %}" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="{% static 'assets/imgs/telegram.svg' %}" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="{% static 'assets/imgs/telegram.svg' %}" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="{% static 'javascript/app.js' %}"></script>
+</body>
+
+</html>

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-metrics</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/lightgallery-bundle.css">
+    <link rel="stylesheet" href="css/lightgallery.css">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+</head>
+
+<body>
+    <div class="wrapper product-page">
+        <header class="header cabinet">
+            <div class="container cabinet">
+                <div class="header__inner">
+                    <div class="header__left">
+                        <div class="header__burger cabinet" id="cabinet-burger">
+                            <span></span>
+                        </div>
+                        <a href="index.html" class="header__logo cabinet">
+                            <img src="assets/imgs/Header-Logo.svg" alt="Логотип" />
+                        </a>
+                        <div class="header__search">
+                            <input class="header__input" type="text" placeholder="Поиск" />
+                            <img class="header__search-ico" src="assets/imgs/search.svg" alt="Поиск" />
+                        </div>
+                    </div>
+
+                    <div class="header__right">
+                        <a href="#!" class="header__profile">
+                            <img class="profile__photo" src="assets/imgs/test.jpg" alt="Профиль" />
+                            <a href="#" class="profile__section">
+                                <div class="profile__name">Антон Александров</div>
+                                <img src="assets/imgs/profile-arrow.svg" alt="Стрелка" />
+                            </a>
+                        </a>
+                        <a href="#!" class="profile__notification">
+                            <img src="assets/imgs/notifications.svg" alt="Уведомления" />
+                            <img class="header__search-ico" src="assets/imgs/search.svg" alt="Поиск" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main cabinet">
+            <div class="product__inner">
+                <div class="cabinet__sidebar">
+                    <div class="sidebar__inner">
+                        <div class="sidebar__section">
+                            <div class="sidebar__title">Аналитика</div>
+                            <ul class="sidebar__list">
+                                <li class="sidebar__item">
+                                    <a href="#">
+                                        <svg>
+                                            <use xlink:href="sprite.svg#product"></use>
+                                        </svg>
+                                        <p>Товары</p>
+                                    </a>
+                                </li>
+                                <li class="sidebar__item">
+                                    <a href="#">
+                                        <svg>
+                                            <use xlink:href="sprite.svg#category"></use>
+                                        </svg>
+                                        <p>Категории / Ниши</p>
+                                    </a>
+                                </li>
+                                <li class="sidebar__item">
+                                    <a href="#">
+                                        <svg>
+                                            <use xlink:href="sellers.svg#sellers"></use>
+                                        </svg>
+                                        <p>Продавцы</p>
+                                    </a>
+                                </li>
+                                <li class="sidebar__item">
+                                    <a href="#">
+                                        <svg>
+                                            <use xlink:href="sellers.svg#brands"></use>
+                                        </svg>
+                                        <p>Бренды</p>
+                                    </a>
+                                </li>
+                                <li class="sidebar__item">
+                                    <a href="#">
+                                        <svg class="none">
+                                            <use xlink:href="favorite.svg#favorite"></use>
+                                        </svg>
+                                        <p>Избранное</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sidebar__section">
+                            <div class="sidebar__title">Поиск товаров</div>
+                            <ul class="sidebar__list">
+                                <li class="sidebar__item">
+                                    <a href="#">
+                                        <svg class="none">
+                                            <use xlink:href="favorite.svg#addTask"></use>
+                                        </svg>
+                                        <p>Создать таск</p>
+                                    </a>
+                                </li>
+                                <li class="sidebar__item">
+                                    <a href="taskview.html" class="active">
+                                        <svg>
+                                            <use xlink:href="viewTask.svg#viewTask"></use>
+                                        </svg>
+                                        <p>Просмотр тасков</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sidebar__section support">
+                            <li class="sidebar__item">
+                                <a href="support.html">
+                                    <svg class="none stroke">
+                                        <use xlink:href="viewTask.svg#support"></use>
+                                    </svg>
+                                    <p>Поддержка</p>
+                                </a>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+                <div class="cabinet__main">
+                    <div class="container product-main">
+                        <div class="product__page-breadcrumbs ">
+                            <a href="taskview.html">Таски</a>
+                            <img src="assets/imgs/breadcrumb-stick.svg" alt="">
+                            <a href="task-open.html">Какое-то очень интересное название таска</a>
+                        </div>
+                        <div class="product__page-title ">
+                            <p>Какое-то очень интересное название таска</p>
+                        </div>
+                        <div class="product__information">
+                            <div class="product__preview">
+                                <div class="product__photo">
+                                    <div class="product__gallery" id="lightgallery">
+                                        <a href="assets/imgs/product-preview-01.png">
+                                            <img alt="img1" src="assets/imgs/product-preview-01.png" />
+                                        </a>
+                                        <a href="assets/imgs/product-preview-02.png">
+                                            <img alt="img1" src="assets/imgs/product-preview-02.png" />
+                                        </a>
+                                        <a href="assets/imgs/product-preview-03.png">
+                                            <img alt="img1" src="assets/imgs/product-preview-03.png" />
+                                        </a>
+                                        <a href="assets/imgs/product-preview.png">
+                                            <img alt="img1" src="assets/imgs/product-preview.png" />
+                                        </a>
+                                    </div>
+                                    <div class="gallery-arrow">
+                                        <img src="assets/imgs/gallery-arrow.svg" alt="arrow">
+                                    </div>
+                                </div>
+
+                                <ul class="product__mobile-preview swiper3 swiper">
+                                    <div class="swiper-wrapper">
+                                        <li class="mobile-preview-item swiper-slide">
+                                            <img alt="img1" src="assets/imgs/product-slide.png" />
+                                        </li>
+                                        <li class="mobile-preview-item swiper-slide">
+                                            <img alt="img1" src="assets/imgs/product-slide.png" />
+                                        </li>
+                                        <li class="mobile-preview-item swiper-slide">
+                                            <img alt="img1" src="assets/imgs/product-slide.png" />
+                                        </li>
+                                        <li class="mobile-preview-item swiper-slide">
+                                            <img alt="img1" src="assets/imgs/product-slide.png" />
+                                        </li>
+                                    </div>
+                                </ul>
+
+                            </div>
+                            <div class="product__properties">
+                                <div class="properties__column">
+                                    <div class="properties__item task-open">
+                                        <span>Название товара:</span>
+                                        <p>Кардиган женский</p>
+                                    </div>
+                                    <div class="properties__item task-open">
+                                        <span>Дата создания таска:</span>
+                                        <p>07.07.2023</p>
+                                    </div>
+                                    <div class="properties__item task-open">
+                                        <span>Кол-во найденных товаров:</span>
+                                        <p>3200</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products__title task-title">
+                            <div class="title__text">Список товаров</div>
+                            <div class="title__results">(найдено 25 000 результатов)</div>
+                        </div>
+                        <div class="task-filters">
+                            <div class="ranges__item task-range">
+                                <div class="ranges__items">
+                                    <div class="sales__item">
+                                        <div class="ranges__title">Цена</div>
+                                        <div class="sales__list">
+                                            <div class="sales__item">
+                                                <label for="ot">От</label>
+                                                <input type="number" name="ot" placeholder="0">
+                                            </div>
+                                            <div class="sales__item">
+                                                <label for="do">До</label>
+                                                <input type="number" name="do" placeholder="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sales__item">
+                                        <div class="ranges__title">Кол-во товара</div>
+                                        <div class="sales__list">
+                                            <div class="sales__item">
+                                                <label for="ot">От</label>
+                                                <input type="number" name="ot" placeholder="0">
+                                            </div>
+                                            <div class="sales__item">
+                                                <label for="do">До</label>
+                                                <input type="number" name="do" placeholder="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="task__right">
+                                <div class="search__input categories__input">
+                                    <div class="input__item">
+                                        <img src="assets/imgs/search.svg" alt="Поиск" />
+                                        <input class="filters__input" type="text" placeholder="Поиск" />
+                                    </div>
+                                    <div class="categories__switch-filters">
+                                        <img src="assets/imgs/filters-open.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="dropdown__block">
+                                    <p>Сортировать:</p>
+                                    <span>
+                                        <p class="dropdown__title">Дата добавления</p>
+                                        <img src="assets/imgs/faq-arrow.svg" alt="">
+                                        <ul class="drop-menu" id="dropmenu">
+                                            <li class="drop-item" data-value="Дата размещения">Дата размещения</li>
+                                            <li class="drop-item" data-value="Цвет 2">Цвет 2</li>
+                                            <li class="drop-item" data-value="Цвет 3">Цвет 3</li>
+                                            <li class="drop-item" data-value="Цвет 4">Цвет 4</li>
+                                        </ul>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="task-products">
+                            <div class="task-row">
+                                <div class="task__item">
+                                    <div class="item__inner">
+                                        <div class="task-preview">
+                                            <img src="assets/imgs/product-preview-01.png" alt="">
+                                        </div>
+                                        <ul class="task__product-properties">
+                                            <li class="product__property">
+                                                <span>Название товара:</span>
+                                                <p class="blue">Кардиган женский, ограниченная...</p>
+                                            </li>
+                                            <li class="product__property">
+                                                <span>Пробная партия (1шт):</span>
+                                                <p>200 ₽</p>
+                                            </li>
+                                            <li class="product__property mobile">
+                                                <span>Поставщик:</span>
+                                                <img src="assets/imgs/property-task.png" alt="">
+                                            </li>
+                                            <li class="product__property">
+                                                <span>Дата нахождения товара:</span>
+                                                <p>07.07.2023</p>
+                                            </li>
+                                            <li class="product__property price-change">
+                                                <span>Цена товара:</span>
+                                                <div class="price">
+                                                    <p>400₽ - 800₽</p>
+                                                    <img src="assets/imgs/price.png" alt="">
+                                                    <b>+10%</b>
+                                                </div>
+                                            </li>
+                                            <li class="product__property mobile">
+                                                <span>Минимальное кол-во:</span>
+                                                <p>100 шт</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="prop-mob">
+                                        <li class="product__property">
+                                            <span>Поставщик:</span>
+                                            <img src="assets/imgs/property-task.png" alt="">
+                                        </li>
+                                        <li class="product__property">
+                                            <span>Мин. кол-во:</span>
+                                            <p>1000</p>
+                                        </li>
+                                    </div>
+                                </div>
+                                <div class="task__item">
+                                    <div class="item__inner">
+                                        <div class="task-preview">
+                                            <img src="assets/imgs/product-preview-01.png" alt="">
+                                        </div>
+                                        <ul class="task__product-properties">
+                                            <li class="product__property">
+                                                <span>Название товара:</span>
+                                                <p class="blue">Кардиган женский, ограниченная...</p>
+                                            </li>
+                                            <li class="product__property">
+                                                <span>Пробная партия (1шт):</span>
+                                                <p>200 ₽</p>
+                                            </li>
+                                            <li class="product__property mobile">
+                                                <span>Поставщик:</span>
+                                                <img src="assets/imgs/property-task.png" alt="">
+                                            </li>
+                                            <li class="product__property">
+                                                <span>Дата нахождения товара:</span>
+                                                <p>07.07.2023</p>
+                                            </li>
+                                            <li class="product__property price-change">
+                                                <span>Цена товара:</span>
+                                                <div class="price">
+                                                    <p>400₽ - 800₽</p>
+                                                    <img src="assets/imgs/price.png" alt="">
+                                                    <b>+10%</b>
+                                                </div>
+                                            </li>
+                                            <li class="product__property mobile">
+                                                <span>Минимальное кол-во:</span>
+                                                <p>100 шт</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="prop-mob">
+                                        <li class="product__property">
+                                            <span>Поставщик:</span>
+                                            <img src="assets/imgs/property-task.png" alt="">
+                                        </li>
+                                        <li class="product__property">
+                                            <span>Мин. кол-во:</span>
+                                            <p>1000</p>
+                                        </li>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="task-row">
+                                <div class="task__item">
+                                    <div class="item__inner">
+                                        <div class="task-preview">
+                                            <img src="assets/imgs/product-preview-01.png" alt="">
+                                        </div>
+                                        <ul class="task__product-properties">
+                                            <li class="product__property">
+                                                <span>Название товара:</span>
+                                                <p class="blue">Кардиган женский, ограниченная...</p>
+                                            </li>
+                                            <li class="product__property">
+                                                <span>Пробная партия (1шт):</span>
+                                                <p>200 ₽</p>
+                                            </li>
+                                            <li class="product__property mobile">
+                                                <span>Поставщик:</span>
+                                                <img src="assets/imgs/property-task.png" alt="">
+                                            </li>
+                                            <li class="product__property">
+                                                <span>Дата нахождения товара:</span>
+                                                <p>07.07.2023</p>
+                                            </li>
+                                            <li class="product__property price-change">
+                                                <span>Цена товара:</span>
+                                                <div class="price">
+                                                    <p>400₽ - 800₽</p>
+                                                    <img src="assets/imgs/price.png" alt="">
+                                                    <b>+10%</b>
+                                                </div>
+                                            </li>
+                                            <li class="product__property mobile">
+                                                <span>Минимальное кол-во:</span>
+                                                <p>100 шт</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="prop-mob">
+                                        <li class="product__property">
+                                            <span>Поставщик:</span>
+                                            <img src="assets/imgs/property-task.png" alt="">
+                                        </li>
+                                        <li class="product__property">
+                                            <span>Мин. кол-во:</span>
+                                            <p>1000</p>
+                                        </li>
+                                    </div>
+                                </div>
+                                <div class="task__item">
+                                    <div class="item__inner">
+                                        <div class="task-preview">
+                                            <img src="assets/imgs/product-preview-01.png" alt="">
+                                        </div>
+                                        <ul class="task__product-properties">
+                                            <li class="product__property">
+                                                <span>Название товара:</span>
+                                                <p class="blue">Кардиган женский, ограниченная...</p>
+                                            </li>
+                                            <li class="product__property">
+                                                <span>Пробная партия (1шт):</span>
+                                                <p>200 ₽</p>
+                                            </li>
+                                            <li class="product__property mobile">
+                                                <span>Поставщик:</span>
+                                                <img src="assets/imgs/property-task.png" alt="">
+                                            </li>
+                                            <li class="product__property">
+                                                <span>Дата нахождения товара:</span>
+                                                <p>07.07.2023</p>
+                                            </li>
+                                            <li class="product__property price-change">
+                                                <span>Цена товара:</span>
+                                                <div class="price">
+                                                    <p>400₽ - 800₽</p>
+                                                    <img src="assets/imgs/price.png" alt="">
+                                                    <b>+10%</b>
+                                                </div>
+                                            </li>
+                                            <li class="product__property mobile">
+                                                <span>Минимальное кол-во:</span>
+                                                <p>100 шт</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="prop-mob">
+                                        <li class="product__property">
+                                            <span>Поставщик:</span>
+                                            <img src="assets/imgs/property-task.png" alt="">
+                                        </li>
+                                        <li class="product__property">
+                                            <span>Мин. кол-во:</span>
+                                            <p>1000</p>
+                                        </li>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="javascript/lightgallery.min.js"></script>
+    <script src="javascript/task-open.js"></script>
+</body>
+
+</html>

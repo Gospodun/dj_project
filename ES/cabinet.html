@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-metrics</title>
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header cabinet">
+            <div class="container cabinet">
+                <div class="header__inner">
+
+                    <div class="header__left">
+                        <div class="header__burger cabinet" id="cabinet-burger">
+                            <span></span>
+                        </div>
+                        <a href="index.html" class="header__logo cabinet">
+                            <img src="assets/imgs/Header-Logo.svg" alt="Логотип">
+                        </a>
+                        <div class="header__search">
+                            <input class="header__input" type="text" placeholder="Поиск">
+                            <img class="header__search-ico" src="assets/imgs/search.svg" alt="Поиск">
+                        </div>
+                    </div>
+
+                    <div class="header__right">
+                        <a href="#!" class="header__profile">
+                            <img class="profile__photo" src="assets/imgs/test.jpg" alt="Профиль">
+                            <a href="#" class="profile__section">
+                                <div class="profile__name">Антон Александров</div>
+                                <img src="assets/imgs/profile-arrow.svg" alt="Стрелка">
+                            </a>
+                        </a>
+                        <a href="#!" class="profile__notification">
+                            <img src="assets/imgs/notifications.svg" alt="Уведомления">
+                            <img class="header__search-ico" src="assets/imgs/search.svg" alt="Поиск">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main cabinet">
+            <div class="cabinet__inner">
+                <div class="cabinet__sidebar">
+                    <div class="sidebar__inner">
+                        <div class="sidebar__section">
+                            <div class="sidebar__title">Аналитика</div>
+                            <ul class="sidebar__list">
+                                <li class="sidebar__item">
+                                    <a href="products.html">
+                                        <svg>
+                                            <use xlink:href="sprite.svg#product"></use>
+                                        </svg>
+                                        <p>Товары</p>
+                                    </a>
+                                </li>
+                                <li class="sidebar__item">
+                                    <a href="categories.html">
+                                        <svg>
+                                            <use xlink:href="sprite.svg#category"></use>
+                                        </svg>
+                                        <p>Категории / Ниши</p>
+                                    </a>
+                                </li>
+                                <li class="sidebar__item">
+                                    <a href="sellers.html">
+                                        <svg>
+                                            <use xlink:href="sellers.svg#sellers"></use>
+                                        </svg>
+                                        <p>Продавцы</p>
+                                    </a>
+                                </li>
+                                <li class="sidebar__item">
+                                    <a href="brands.html">
+                                        <svg>
+                                            <use xlink:href="sellers.svg#brands"></use>
+                                        </svg>
+                                        <p>Бренды</p>
+                                    </a>
+                                </li>
+                                <li class="sidebar__item">
+                                    <a href="favorites.html">
+                                        <svg class="none">
+                                            <use xlink:href="favorite.svg#favorite"></use>
+                                        </svg>
+                                        <p>Избранное</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sidebar__section">
+                            <div class="sidebar__title">Поиск товаров</div>
+                            <ul class="sidebar__list">
+                                <li class="sidebar__item">
+                                    <a href="taskview.html">
+                                        <svg class="none">
+                                            <use xlink:href="favorite.svg#addTask"></use>
+                                        </svg>
+                                        <p>Создать таск</p>
+                                    </a>
+                                </li>
+                                <li class="sidebar__item">
+                                    <a href="taskview.html">
+                                        <svg>
+                                            <use xlink:href="viewTask.svg#viewTask"></use>
+                                        </svg>
+                                        <p>Просмотр тасков</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sidebar__section support">
+                            <li class="sidebar__item">
+                                <a href="support.html">
+                                    <svg class="none stroke">
+                                        <use xlink:href="viewTask.svg#support"></use>
+                                    </svg>
+                                    <p>Поддержка</p>
+                                </a>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+                <div class="cabinet__main">
+                    <div class="container cabinet-main">
+                        <div class="cabinet__profile">
+                            <div class="profile__title">Личная кабинет пользователя</div>
+                            <div class="profile__info">
+                                <div class="profile__avatar">
+                                    <img src="assets/imgs/test.jpg" alt="Фото Профиля">
+                                    <button>
+                                        <img class="change__profile" src="assets/imgs/change-avatar.svg"
+                                            alt="Изменить фото">
+                                    </button>
+                                </div>
+                                <div class="profile__name">
+                                    <p>Антон Александров</p>
+                                    <button>
+                                        <img src="assets/imgs/pencil.svg" alt="Изменить">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="profile__personal">
+                                <ul class="personal__list">
+                                    <li class="personal__item">
+                                        <div class="personal__title">Номер телефона</div>
+                                        <div class="personal__data">
+                                            <p>+7 (913) 440-09-50</p>
+                                            <button>
+                                                <img src="assets/imgs/pencil.svg" alt="Изменить">
+                                            </button>
+                                        </div>
+                                    </li>
+                                    <li class="personal__item">
+                                        <div class="personal__title">E-mail</div>
+                                        <div class="personal__data">
+                                            <p>anto4ka@gmail.com</p>
+                                            <button>
+                                                <img src="assets/imgs/pencil.svg" alt="Изменить">
+                                            </button>
+                                        </div>
+                                    </li>
+                                    <li class="personal__item">
+                                        <div class="personal__title">Пароль</div>
+                                        <div class="personal__data">
+                                            <p>*****************</p>
+                                            <button class="change-pass">
+                                                сменить пароль
+                                            </button>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="personal__exit pc">
+                                    <button>
+                                        <img src="assets/imgs/exit.svg" alt="Выйти из аккаунта">
+                                        <p>Выйти из аккаунта</p>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tarifs__info">
+                            <div class="tarif__item">
+                                <div class="tarif__header">
+                                    <div class="tarif__info">
+                                        <div class="tarif__title">Активный тариф:</div>
+                                        <div class="tarif__current">Базовый</div>
+                                    </div>
+                                    <div class="tarif__date">
+                                        <div class="date__title">Активен</div>
+                                        <div class="date__current">до 24.08.2023</div>
+                                    </div>
+                                </div>
+                                <div class="tarif__about">
+                                    Стандартный тариф, подходящий для новичков в продажах
+                                </div>
+                                <a class="tarif__change" href="#!">
+                                    Сменить тариф
+                                </a>
+                                <div class="tarif__footer">
+                                    <button class="footer__button">
+                                        <p> Продлить доступ</p>
+                                    </button>
+                                    <button class="footer__button auto" id="autoExpand">
+                                        Включить автопродление
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="tarif__item">
+                                <div class="tarif__header history">
+                                    <div class="tarif__info history">
+                                        <img src="assets/imgs/history.svg" alt="История оплат">
+                                        <div class="tarif__current">История оплат</div>
+                                    </div>
+                                    <a href="#!" class="tarif__date history">
+                                        См. все платяжи
+                                    </a>
+                                </div>
+                                <div class="history__rows">
+                                    <div class="history__row">
+                                        <div class="history__date">
+                                            <div class="first__date">24.06.2023</div>
+                                            <a class="extend__tarif" href="#!">
+                                                Продление базового тарифа
+                                            </a>
+                                        </div>
+                                        <div class="history__buy">
+                                            <div class="last__date">Срок продления: до 24.07.2023</div>
+                                            <div class="buy__method">Tinkoff 4200 **** **** 2024</div>
+                                        </div>
+                                    </div>
+                                    <div class="history__row">
+                                        <div class="history__date">
+                                            <div class="first__date">24.06.2023</div>
+                                            <a class="extend__tarif" href="#!">
+                                                Продление базового тарифа
+                                            </a>
+                                        </div>
+                                        <div class="history__buy">
+                                            <div class="last__date">Срок продления: до 24.07.2023</div>
+                                            <div class="buy__method">Tinkoff 4200 **** **** 2024</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cabinet__notitfication">
+                            <div class="profile__title notification">Личная кабинет пользователя</div>
+                            <ul class="notification__list">
+                                <li class="notitfication__item">
+                                    <div class="personal__title">Telegram</div>
+                                    <div class="personal__data">
+                                        <div class="category__item">
+                                            <p>@anton_webdesign</p>
+                                        </div>
+                                        <button>
+                                            <img src="assets/imgs/pencil.svg" alt="Изменить">
+                                        </button>
+                                    </div>
+                                </li>
+                                <li class="notitfication__item">
+                                    <div class="personal__title">E-mail</div>
+                                    <div class="personal__data">
+                                        <div class="category__item">
+                                            <p>anto4ka@gmail.com</p>
+                                        </div>
+                                        <button>
+                                            <img src="assets/imgs/pencil.svg" alt="Изменить">
+                                        </button>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="personal__exit mob">
+                                <button>
+                                    <img src="assets/imgs/exit.svg" alt="Выйти из аккаунта">
+                                    <p>Выйти из аккаунта</p>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="javascript/cabinet.js"></script>
+    <script src="javascript/script.js"></script>
+
+</body>
+
+</html>

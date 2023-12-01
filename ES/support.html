@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-metrics</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+</head>
+
+<body>
+    <div class="wrapper product-page">
+        <header class="header cabinet">
+            <div class="container cabinet">
+                <div class="header__inner">
+                    <div class="header__left">
+                        <div class="header__burger cabinet" id="cabinet-burger">
+                            <span></span>
+                        </div>
+                        <a href="index.html" class="header__logo cabinet">
+                            <img src="assets/imgs/Header-Logo.svg" alt="Логотип" />
+                        </a>
+                        <div class="header__search">
+                            <input class="header__input" type="text" placeholder="Поиск" />
+                            <img class="header__search-ico" src="assets/imgs/search.svg" alt="Поиск" />
+                        </div>
+                    </div>
+
+                    <div class="header__right">
+                        <a href="#!" class="header__profile">
+                            <img class="profile__photo" src="assets/imgs/test.jpg" alt="Профиль" />
+                            <a href="#" class="profile__section">
+                                <div class="profile__name">Антон Александров</div>
+                                <img src="assets/imgs/profile-arrow.svg" alt="Стрелка" />
+                            </a>
+                        </a>
+                        <a href="#!" class="profile__notification">
+                            <img src="assets/imgs/notifications.svg" alt="Уведомления" />
+                            <img class="header__search-ico" src="assets/imgs/search.svg" alt="Поиск" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main cabinet">
+            <div class="product__inner">
+                <div class="cabinet__sidebar">
+                    <div class="sidebar__inner">
+                        <div class="sidebar__section">
+                            <div class="sidebar__title">Аналитика</div>
+                            <ul class="sidebar__list">
+                                <li class="sidebar__item">
+                                    <a href="#">
+                                        <svg>
+                                            <use xlink:href="sprite.svg#product"></use>
+                                        </svg>
+                                        <p>Товары</p>
+                                    </a>
+                                </li>
+                                <li class="sidebar__item">
+                                    <a href="#">
+                                        <svg>
+                                            <use xlink:href="sprite.svg#category"></use>
+                                        </svg>
+                                        <p>Категории / Ниши</p>
+                                    </a>
+                                </li>
+                                <li class="sidebar__item">
+                                    <a href="#">
+                                        <svg>
+                                            <use xlink:href="sellers.svg#sellers"></use>
+                                        </svg>
+                                        <p>Продавцы</p>
+                                    </a>
+                                </li>
+                                <li class="sidebar__item">
+                                    <a href="#">
+                                        <svg>
+                                            <use xlink:href="sellers.svg#brands"></use>
+                                        </svg>
+                                        <p>Бренды</p>
+                                    </a>
+                                </li>
+                                <li class="sidebar__item">
+                                    <a href="#">
+                                        <svg class="none">
+                                            <use xlink:href="favorite.svg#favorite"></use>
+                                        </svg>
+                                        <p>Избранное</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sidebar__section">
+                            <div class="sidebar__title">Поиск товаров</div>
+                            <ul class="sidebar__list">
+                                <li class="sidebar__item">
+                                    <a href="#">
+                                        <svg class="none">
+                                            <use xlink:href="favorite.svg#addTask"></use>
+                                        </svg>
+                                        <p>Создать таск</p>
+                                    </a>
+                                </li>
+                                <li class="sidebar__item">
+                                    <a href="taskview.html">
+                                        <svg>
+                                            <use xlink:href="viewTask.svg#viewTask"></use>
+                                        </svg>
+                                        <p>Просмотр тасков</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sidebar__section support">
+                            <li class="sidebar__item">
+                                <a href="support.html" class="active">
+                                    <svg class="none stroke">
+                                        <use xlink:href="viewTask.svg#support"></use>
+                                    </svg>
+                                    <p>Поддержка</p>
+                                </a>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+                <div class="cabinet__main">
+                    <div class="container product-main">
+                        <div class="products__title">
+                            <div class="title__text">Поддержка</div>
+                        </div>
+                        <div class="support__buttons">
+                            <button class="create__ticket" id="openModalBtn">
+                                <p>Создать обращение</p>
+                            </button>
+                            <a href="#">Ответы на частые вопросы</a>
+                        </div>
+                        <div class="product__table support-table">
+                            <div class="table__head">
+                                <table>
+                                    <thead>
+                                        <th class="head__item">№</th>
+                                        <th class="head__item">Раздел обращения</th>
+                                        <th class="head__item">Название обращения</th>
+                                        <th class="head__item">Статус обращения</th>
+                                        <th class="head__item">Дата обращения</th>
+                                    </thead>
+                                </table>
+                            </div>
+                            <div class="table__main">
+                                <table>
+                                    <tbody>
+                                        <tr class="table__row">
+                                            <td class="row__item first">1</td>
+                                            <td class="row__item">Функционал ПО</td>
+                                            <td class="row__item">
+                                                <p>
+                                                    Товарищи! рамки и место обучения кадров требуют определения и
+                                                    уточнения дальнейших направлений развития. Не следует, однако
+                                                    забывать, что консультация с широким активом позволяет оценить
+                                                    значение существенных финансовых и административных условий
+                                                </p>
+                                            </td>
+                                            <td class="row__item">Обращение в работе</td>
+                                            <td class="row__item">17.06.2023</td>
+                                        </tr>
+                                        <tr class="table__row">
+                                            <td class="row__item first">1</td>
+                                            <td class="row__item">Функционал ПО</td>
+                                            <td class="row__item">
+                                                <p>Товарищи! рамки и место обучения кадров требуют определения и
+                                                    уточнения дальнейших направлений развития. Не следует, однако
+                                                    забывать, что консультация с широким активом позволяет оценить
+                                                    значение существенных финансовых и административных условий</p>
+                                            </td>
+                                            <td class="row__item">Обращение в работе</td>
+                                            <td class="row__item">17.06.2023</td>
+                                        </tr>
+                                        <tr class="table__row">
+                                            <td class="row__item first">1</td>
+                                            <td class="row__item">Функционал ПО</td>
+                                            <td class="row__item">
+                                                <p>Товарищи! рамки и место обучения кадров требуют определения и
+                                                    уточнения дальнейших направлений развития. Не следует, однако
+                                                    забывать, что консультация с широким активом позволяет оценить
+                                                    значение существенных финансовых и административных условий</p>
+                                            </td>
+                                            <td class="row__item">Обращение в работе</td>
+                                            <td class="row__item">17.06.2023</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="modal" class="modal">
+                        <div class="modal-content">
+                            <span class="close" id="closeModalBtn">&times;</span>
+                            <div class="modal__title">Создание обращения</div>
+                            <div class="appeal__section">
+                                <div class="modal__subtitle">Раздел обращения:</div>
+                                <div class="appeal__menu">
+                                    <div class="menu__title" id="menuTitle">Выберите тему</div>
+                                    <img src="assets/imgs/faq-arrow.svg" alt="">
+                                    <div class="modal-drop">
+                                        <div class="modal__drop-item">Тема 1</div>
+                                        <div class="modal__drop-item">Тема 2</div>
+                                        <div class="modal__drop-item">Тема 3</div>
+                                        <div class="modal__drop-item">Тема 4</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main__appeal">
+                                <div class="modal__subtitle">Обращение:</div>
+                                <textarea
+                                    placeholder="Подробное описание поможет нам ответить вам как можно скорее, без уточнения других деталей"></textarea>
+                            </div>
+                            <button class="modal__btn">
+                                <p>Отправить</p>
+                            </button>
+                            <p class="modal__info">Максимальный срок ответа — 24 часа</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="javascript/support.js"></script>
+</body>
+
+</html>
