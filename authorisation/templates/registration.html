@@ -74,7 +74,7 @@
                     У вас уже есть аккаунт, <a href="../authorisation">Авторизуйте его</a>
                 </h2>
                 <div class="registration__inner">
-                    <form class="registration__form" action="#">
+                    <form class="registration__form" action="#" method="POST">
                         <div class="registration__row">
                             <div class="registration__input">
                                 <label for="name">Имя</label>
@@ -92,14 +92,14 @@
                             </div>
                             <div class="registration__input">
                                 <label for="phone">Номер телефона</label>
-                                <input type="number" name="phone" placeholder="+7 (999) 999-99-99">
+                                <input type="number" name="username" placeholder="+7 (999) 999-99-99">
                                 <a href="#">отправить код</a>
                             </div>
                         </div>
                         <div class="registration__row">
                             <div class="registration__input">
                                 <label for="password">Пароль</label>
-                                <input type="password" name="password" placeholder="••••••••••••••••••••••••••••">
+                                <input type="password" name="password1" placeholder="••••••••••••••••••••••••••••">
                                 <a href="#">
                                     <img src="{% static 'assets/imgs/hidepas.svg' %}" alt="">
                                 </a>
@@ -109,10 +109,19 @@
                                 <input type="password" name="code" placeholder="••••••••••••••••••••••••••••">
                             </div>
                         </div>
+                        <div class="registration__row">
+                            <div class="registration__input">
+                                <label for="password">Подтвердите пароль</label>
+                                <input type="password" name="password2" placeholder="••••••••••••••••••••••••••••">
+                                <a href="#">
+                                    <img src="{% static 'assets/imgs/hidepas.svg' %}" alt="">
+                                </a>
+                            </div>
+                        </div>
                         <div class="registration__row btn">
                             <div class="registration__input">
                                 <button type="submit">
-                                    <p>Авторизоваться аккаунт</p>
+                                    <p>Зарегистрироваться</p>
                                 </button>
                             </div>
                             <div class="registration__checkbox">

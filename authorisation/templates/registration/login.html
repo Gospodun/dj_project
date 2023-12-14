@@ -27,29 +27,29 @@
         <header class="header">
             <div class="container">
                 <div class="header__inner">
-                    <a href="..">
+                    <a href="../..">
                         <img src="{% static 'assets/imgs/Header-Logo.svg' %}" alt="Логотип" class="header__logo">
                     </a>
                     <nav class="header__menu">
                         <ul class="menu-list">
                             <a class="login-link burger" href="">Войти</a>
                             <li class="menu-item">
-                                <a href="#" class="menu-link">О продукте</a>
+                                <a href="../../#prod" class="menu-link">О продукте</a>
                             </li>
                             <li class="menu-item">
                                 <a href="#" class="menu-link">Тарифы</a>
                             </li>
                             <li class="menu-item">
-                                <a href="#" class="menu-link">Отзывы</a>
+                                <a href="../../#review" class="menu-link">Отзывы</a>
                             </li>
                             <li class="menu-item">
-                                <a href="blog" class="menu-link">Блог</a>
+                                <a href="../../blog" class="menu-link">Блог</a>
                             </li>
                             <li class="menu-item">
-                                <a href="#" class="menu-link">FAQ</a>
+                                <a href="../../#faq" class="menu-link">FAQ</a>
                             </li>
                             <li class="menu-item">
-                                <a href="../contacts" class="menu-link">Контакты</a>
+                                <a href="../../contacts" class="menu-link">Контакты</a>
                             </li>
                         </ul>
                     </nav>
@@ -57,7 +57,7 @@
                         <div class="button-login">
                             <a class="login-link" href="">Войти</a>
                         </div>
-                        <a href="registration" class="button-reg">
+                        <a href="../registration" class="button-reg">
                             <p>Регистрация</p>
                         </a>
                         <div class="header__burger">
@@ -74,11 +74,12 @@
                     Если у вас нету аккаунта, <a href="registration">Зарегистрируйте его</a>
                 </h2>
                 <div class="registration__inner auth">
-                    <form class="registration__form" action="#">
+                    <form class="registration__form" method="post">
+                        {% csrf_token %}
                         <div class="registration__row auth">
                             <div class="registration__input">
                                 <label for="phone">Номер телефона</label>
-                                <input type="number" name="phone" placeholder="+7 (999) 999-99-99">
+                                {{ form.username }}
                             </div>
                         </div>
                         <div class="registration__row">
@@ -102,7 +103,7 @@
                         </div>
                         <div class="registration__input">
                             <button type="submit">
-                                <p>Авторизоваться аккаунт</p>
+                                <p>Авторизоваться</p>
                             </button>
                         </div>
                         <div class="registration__column">
