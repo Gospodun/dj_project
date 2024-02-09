@@ -26,7 +26,9 @@ def categories(request):
     return render(request, 'categories.html')
 
 def sellers(request):
-    return render(request, 'sellers.html')
+    sellers = SellerCH.objects.using("clickhouse").all()
+    context = {'sellers': sellers}
+    return render(request, 'sellers.html', context)
 
 def brands(request):
     brands = BrandCH.objects.using("clickhouse").all()

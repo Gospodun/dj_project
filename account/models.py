@@ -32,3 +32,11 @@ class SellerCH(chmodels.ClickhouseModel):
     sellerID =  chmodels.StringField(default="")
     psrn =  chmodels.StringField(default="")
     url =  chmodels.StringField(default="")
+
+
+class CategoriesCH(chmodels.ClickhouseModel):
+    catid = chmodels.StringField(default="")
+    mpName = chmodels.StringField(default="")
+    name =  chmodels.StringField(default="")
+    url =  chmodels.StringField(default="")
+    parentid =  chmodels.StringField(default="")

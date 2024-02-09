@@ -147,7 +147,7 @@
                 <div class="category__open-page">
                     <div class="products__title">
                         <div class="title__text">Продавцы</div>
-                        <div class="title__results">(найдено 6511 результатов)</div>
+                        <div class="title__results">(найдено {{sellers|length}} результата)</div>
                     </div>
                     <div class="products__filters category">
                         <div class="filters__search">
@@ -258,6 +258,27 @@
                         <div class="table__main">
                             <table>
                                 <tbody>
+                                    {% for seller in sellers %}
+                                        <tr class="table__row">
+                                            <td class="row__item first">
+                                                <div class="row__item-inner">
+                                                    <img src="{% static 'assets/imgs/wb.png'%}" alt="">
+                                                    <div class="tabe__item-title">{{ seller.name }}<br>({{ seller.psrn }})
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="row__item">186</td>
+                                            <td class="row__item">7</td>
+                                            <td class="row__item">4.8</td>
+                                            <td class="row__item">31 000</td>
+                                            <td class="row__item fourth">31 008 888 ₽</td>
+                                            <td class="row__item">
+                                                <svg class="svg none">
+                                                    <use xlink:href="favorite.svg#favorite"></use>
+                                                </svg>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
                                     <tr class="table__row">
                                         <td class="row__item first">
                                             <div class="row__item-inner">
@@ -326,7 +347,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="javascript/sellers.js"></script>
+    <script src="{% static 'javascript/sellers.js' %}"></script>
 
 </body>
 

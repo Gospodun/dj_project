@@ -1,6 +1,6 @@
 from django.contrib import admin
 from authorisation.models import Profile
-from account.models import ProductCH, BrandCH, SellerCH
+from account.models import ProductCH, BrandCH, SellerCH, CategoriesCH
 
 
 class MultiDBModelAdmin(admin.ModelAdmin):
@@ -48,3 +48,4 @@ admin.site.register(Profile, ProfileAdmin)
 admin.site.register(ProductCH, MultiDBModelAdmin)
 admin.site.register(BrandCH, MultiDBModelAdmin)
 admin.site.register(SellerCH, MultiDBModelAdmin)
+admin.site.register(CategoriesCH, MultiDBModelAdmin)
