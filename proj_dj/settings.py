@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'clickhouse_backend',
 ]
 
 MIDDLEWARE = [
@@ -91,9 +92,18 @@ DATABASES = {
        'PASSWORD': '456',
        'HOST': 'localhost',
        'PORT': '5432',
+    },
+    "clickhouse": {
+        "ENGINE": "clickhouse_backend.backend",
+        "NAME": "djch",
+        "HOST": "localhost",
+        "USER": "default",
+        "PASSWORD": "secret",
     }
 }
 
+
+# DATABASE_ROUTERS = ["dbrouters.ClickHouseRouter"]
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

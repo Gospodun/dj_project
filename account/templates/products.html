@@ -1,0 +1,383 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-metrics</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}" />
+    <link rel="manifest" href="{% static 'favicon/site.webmanifest' %}" />
+    <link rel="mask-icon" href="{% static 'favicon/safari-pinned-tab.svg' %}" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+</head>
+
+<body>
+    <div class="wrapper product-page">
+        <header class="header cabinet">
+            <div class="container cabinet">
+                <div class="header__inner">
+                    <div class="header__left">
+                        <div class="header__burger cabinet" id="cabinet-burger">
+                            <span></span>
+                        </div>
+                        <a href=".." class="header__logo cabinet">
+                            <img src="{% static 'assets/imgs/Header-Logo.svg' %}" alt="Логотип" />
+                        </a>
+                        <div class="header__search">
+                            <input class="header__input" type="text" placeholder="Поиск" />
+                            <img class="header__search-ico" src="{% static 'assets/imgs/search.svg' %}" alt="Поиск" />
+                        </div>
+                    </div>
+
+                    <div class="header__right">
+                        <a href="#!" class="header__profile">
+                            <img class="profile__photo" src="{% static 'assets/imgs/test.jpg' %}" alt="Профиль" />
+                            <a href="#" class="profile__section">
+                                <div class="profile__name">{% if user.is_authenticated %}
+                                    <p>{{ user.name }} {{ user.surname }}</p>
+                                        {% endif %}</div>
+                                <img src="{% static 'assets/imgs/profile-arrow.svg' %}" alt="Стрелка" />
+                            </a>
+                        </a>
+                        <a href="#!" class="profile__notification">
+                            <img src="{% static 'assets/imgs/notifications.svg' %}" alt="Уведомления" />
+                            <img class="header__search-ico" src="{% static 'assets/imgs/search.svg' %}" alt="Поиск" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main cabinet">
+            <div class="product__inner">
+                <div class="cabinet__sidebar">
+                    <div class="sidebar__inner">
+                        <div class="sidebar__section">
+                            <div class="sidebar__title">Аналитика</div>
+                            <ul class="sidebar__list">
+                                <li class="sidebar__item">
+                                    <a href="./products" class="active">
+                                        <svg>
+                                            <use xlink:href="sprite.svg#product"></use>
+                                        </svg>
+                                        <p>Товары</p>
+                                    </a>
+                                </li>
+                                <li class="sidebar__item">
+                                    <a href="./categories">
+                                        <svg>
+                                            <use xlink:href="sprite.svg#category"></use>
+                                        </svg>
+                                        <p>Категории / Ниши</p>
+                                    </a>
+                                </li>
+                                <li class="sidebar__item">
+                                    <a href="./sellers">
+                                        <svg>
+                                            <use xlink:href="sellers.svg#sellers"></use>
+                                        </svg>
+                                        <p>Продавцы</p>
+                                    </a>
+                                </li>
+                                <li class="sidebar__item">
+                                    <a href="./brands">
+                                        <svg>
+                                            <use xlink:href="sellers.svg#brands"></use>
+                                        </svg>
+                                        <p>Бренды</p>
+                                    </a>
+                                </li>
+                                <li class="sidebar__item">
+                                    <a href="./favorites">
+                                        <svg class="none">
+                                            <use xlink:href="favorite.svg#favorite"></use>
+                                        </svg>
+                                        <p>Избранное</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sidebar__section">
+                            <div class="sidebar__title">Поиск товаров</div>
+                            <ul class="sidebar__list">
+                                <li class="sidebar__item">
+                                    <a href="./taskview">
+                                        <svg class="none">
+                                            <use xlink:href="favorite.svg#addTask"></use>
+                                        </svg>
+                                        <p>Создать таск</p>
+                                    </a>
+                                </li>
+                                <li class="sidebar__item">
+                                    <a href="./taskview">
+                                        <svg>
+                                            <use xlink:href="viewTask.svg#viewTask"></use>
+                                        </svg>
+                                        <p>Просмотр тасков</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sidebar__section support">
+                            <li class="sidebar__item">
+                                <a href="./support">
+                                    <svg class="none stroke">
+                                        <use xlink:href="viewTask.svg#support"></use>
+                                    </svg>
+                                    <p>Поддержка</p>
+                                </a>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+                <div class="cabinet__main">
+                    <div class="container product-main">
+                        <div class="products__title">
+                            <div class="title__text">Список товаров</div>
+                            <div class="title__results">(найдено {{ products|length }} результата)</div>
+                        </div>
+                        <div class="products__filters">
+                            <div class="filters__search">
+                                <div class="search__input">
+                                    <img src="{% static 'assets/imgs/search.svg' %}" alt="Поиск" />
+                                    <input class="filters__input" type="text" placeholder="Поиск" />
+                                </div>
+                                <div class="search-mob">
+                                    <a href="#!" class="search__results">
+                                        <p>Выгрузить результаты</p>
+                                        <img src="{% static 'assets/imgs/search-results.svg' %}" alt="Скачать результаты" />
+                                    </a>
+                                    <a href="#!" class="mob-filters">
+                                        <img src="{% static 'assets/imgs/filters-open.svg' %}" alt="" class="search__results-img-mob">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="filters__options">
+                                <div class="option__item">
+                                    <div class="option__title">Срок:</div>
+                                    <div class="option__choose">
+                                        <p>Неделя</p>
+                                        <img src="{% static 'assets/imgs/filter-arrow.svg' %}" alt="Стрелочка фильтра" />
+                                    </div>
+                                </div>
+                                <div class="option__item">
+                                    <div class="option__title">Маркетплейс:</div>
+                                    <div class="option__choose">
+                                        <p>Все</p>
+                                        <img src="{% static 'assets/imgs/filter-arrow.svg' %}" alt="Стрелочка фильтра" />
+                                    </div>
+                                </div>
+                                <div class="option__item">
+                                    <div class="option__title">Сортировать:</div>
+                                    <div class="option__choose">
+                                        <p>Дата добавления</p>
+                                        <img src="{% static 'assets/imgs/filter-arrow.svg' %}" alt="Стрелочка фильтра" />
+                                    </div>
+                                </div>
+                                <button class="filters__button">Фильтры</button>
+                            </div>
+                        </div>
+                        <div class="filters__main">
+                            <div class="filters__ranges">
+                                <div class="ranges__item">
+                                    <div class="ranges__title">Рейтинг</div>
+                                    <div class="range-input">
+                                        <div class="range-slider">
+                                            <span class="slider-track"></span>
+                                            <input type="range" name="min-val" id="" class="min-val" min="0" max="5"
+                                                value="2.1" oninput="slideMin()" step="0.1">
+                                            <input type="range" name="max-val" id="" class="max-val" min="0" max="5"
+                                                value="3.5" oninput="slideMax()" step="0.1">
+                                            <div class="tooltip min-tooltip"></div>
+                                            <div class="tooltip max-tooltip"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ranges__item">
+                                    <div class="ranges__items">
+                                        <div class="sales__item">
+                                            <div class="ranges__title">Продажи</div>
+                                            <div class="sales__list">
+                                                <div class="sales__item">
+                                                    <label for="ot">От</label>
+                                                    <input type="number" name="ot" placeholder="0">
+                                                </div>
+                                                <div class="sales__item">
+                                                    <label for="do">До</label>
+                                                    <input type="number" name="do" placeholder="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sales__item">
+                                            <div class="ranges__title">Цена</div>
+                                            <div class="sales__list">
+                                                <div class="sales__item">
+                                                    <label for="ot">От</label>
+                                                    <input type="number" name="ot" placeholder="0">
+                                                </div>
+                                                <div class="sales__item">
+                                                    <label for="do">До</label>
+                                                    <input type="number" name="do" placeholder="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="filters__list">
+                                <li class="list__col">
+                                    <div class="category__item">
+                                        <p class="item__name">Все категории</p>
+                                    </div>
+                                    <div class="category__item">
+                                        <p class="item__name">Автотовары</p>
+                                    </div>
+                                    <div class="category__item">
+                                        <p class="item__name">Детские товары</p>
+                                    </div>
+                                    <div class="category__item">
+                                        <p class="item__name">Косметика</p>
+                                    </div>
+                                    <div class="category__item">
+                                        <p class="item__name">Одежда и акксесуары</p>
+                                    </div>
+                                </li>
+                                <li class="list__col">
+                                    <div class="category__item">
+                                        <p class="item__name">Все категории</p>
+                                    </div>
+                                    <div class="category__item">
+                                        <p class="item__name">Автотовары</p>
+                                    </div>
+                                    <div class="category__item">
+                                        <p class="item__name">Детские товары</p>
+                                    </div>
+                                    <div class="category__item">
+                                        <p class="item__name">Косметика</p>
+                                    </div>
+                                    <div class="category__item">
+                                        <p class="item__name">Одежда и акксесуары</p>
+                                    </div>
+                                </li>
+                                <li class="list__col">
+                                    <div class="category__item">
+                                        <p class="item__name">Все категории</p>
+                                    </div>
+                                    <div class="category__item">
+                                        <p class="item__name">Автотовары</p>
+                                    </div>
+                                    <div class="category__item">
+                                        <p class="item__name">Детские товары</p>
+                                    </div>
+                                    <div class="category__item">
+                                        <p class="item__name">Косметика</p>
+                                    </div>
+                                    <div class="category__item">
+                                        <p class="item__name">Одежда и акксесуары</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product__table">
+                            <div class="table__head">
+                                <table>
+                                    <thead>
+                                        <th class="head__item first"></th>
+                                        <th class="head__item">Товар</th>
+                                        <th class="head__item">Продавец</th>
+                                        <th class="head__item">Бренд</th>
+                                        <th class="head__item">Цена, ₽</th>
+                                        <th class="head__item">Кол-во, шт</th>
+                                        <th class="head__item">Продажи</th>
+                                        <th class="head__item">Оборот, ₽</th>
+                                        <th class="head__item">Перспективность</th>
+                                        <th class="head__item">Выкуп, %</th>
+                                        <th class="head__item">Комиссия МП, %</th>
+                                    </thead>
+                                </table>
+                            </div>
+                            <div class="table__main">
+                                <table>
+                                    <tbody>
+                                        {% for product in products %}
+                                            <tr class="table__row">
+                                                <td class="row__item first">
+                                                    <img src="{% static 'assets/imgs/table__select.svg' %}" alt="" />
+                                                    <svg class="svg none">
+                                                        <use xlink:href="favorite.svg#favorite"></use>
+                                                    </svg>
+                                                </td>
+                                                <td class="row__item second">
+                                                    <div class="row__img">
+                                                        <img src="{{ product.mainPhoto }}" alt="" />
+                                                    </div>
+                                                    <a href="product-page/{{ product.pid }}" class="table__row-text">
+                                                        <div class="table__item-title">
+                                                            {{ product.name }}
+                                                        </div>
+                                                        <div class="table__item-footer">
+                                                            <div class="table__footer-rate">
+                                                                <img src="{% static 'assets/imgs/table-rate.svg' %}" alt="" />
+                                                                <p>5.0</p>
+                                                                <span>8000 отзывов</span>
+                                                            </div>
+                                                            <div class="table__footer-serial">
+                                                                <img src="{% static 'assets/imgs/serial-number.png' %}" alt="" />
+                                                                {{ product.article }}
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </td>
+                                                <td class="row__item third">
+                                                    {{ product.sellerName }}
+                                                </td>
+                                                <td class="row__item">{{ product.brandName }}</td>
+                                                <td class="row__item">{{ product.price }}</td>
+                                                <td class="row__item">200</td>
+                                                <td class="row__item">4000</td>
+                                                <td class="row__item">1 200 000</td>
+                                                <td class="row__item fourth">
+                                                    <svg class="table-svg green">
+                                                        <use xlink:href="table.svg#perspective"></use>
+                                                    </svg>
+                                                    <svg class="table-svg green">
+                                                        <use xlink:href="table.svg#perspective"></use>
+                                                    </svg>
+                                                    <svg class="table-svg green">
+                                                        <use xlink:href="table.svg#perspective"></use>
+                                                    </svg>
+                                                    <svg class="table-svg green">
+                                                        <use xlink:href="table.svg#perspective"></use>
+                                                    </svg>
+                                                    <svg class="table-svg">
+                                                        <use xlink:href="table.svg#perspective"></use>
+                                                    </svg>
+                                                </td>
+                                                <td class="row__item">95,7</td>
+                                                <td class="row__item">25</td>
+                                            </tr>
+                                        {% endfor %}
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="javascript/products.js"></script>
+
+</body>
+
+</html>
